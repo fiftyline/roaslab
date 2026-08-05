@@ -1,0 +1,4880 @@
+{
+  "meta": {
+    "currency": "KRW",
+    "note": "메인 대시보드용 집계본. 상세는 roas-facts.json.",
+    "period_available": {
+      "start": "2026-07-06",
+      "end": "2026-08-04"
+    }
+  },
+  "days": [
+    "2026-07-06",
+    "2026-07-07",
+    "2026-07-08",
+    "2026-07-09",
+    "2026-07-10",
+    "2026-07-11",
+    "2026-07-12",
+    "2026-07-13",
+    "2026-07-14",
+    "2026-07-15",
+    "2026-07-16",
+    "2026-07-17",
+    "2026-07-18",
+    "2026-07-19",
+    "2026-07-20",
+    "2026-07-21",
+    "2026-07-22",
+    "2026-07-23",
+    "2026-07-24",
+    "2026-07-25",
+    "2026-07-26",
+    "2026-07-27",
+    "2026-07-28",
+    "2026-07-29",
+    "2026-07-30",
+    "2026-07-31",
+    "2026-08-01",
+    "2026-08-02",
+    "2026-08-03",
+    "2026-08-04"
+  ],
+  "media": [
+    {
+      "key": "naver",
+      "name": "Naver",
+      "badge": "N",
+      "cls": "b-n",
+      "source": "naver",
+      "color": "#03C75A",
+      "campaigns": [
+        {
+          "utm_campaign": "브랜드 검색 캠페인",
+          "ltv": 265000,
+          "daily": [
+            {
+              "date": "2026-07-06",
+              "spend": 40224,
+              "revenue": 306567,
+              "impressions": 11031,
+              "clicks": 105,
+              "conversions": 7,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-07",
+              "spend": 43027,
+              "revenue": 298743,
+              "impressions": 12609,
+              "clicks": 128,
+              "conversions": 7,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-08",
+              "spend": 34169,
+              "revenue": 358079,
+              "impressions": 12655,
+              "clicks": 134,
+              "conversions": 8,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-09",
+              "spend": 35457,
+              "revenue": 316936,
+              "impressions": 13033,
+              "clicks": 122,
+              "conversions": 7,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-10",
+              "spend": 41695,
+              "revenue": 347271,
+              "impressions": 12162,
+              "clicks": 117,
+              "conversions": 7,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-11",
+              "spend": 40515,
+              "revenue": 308672,
+              "impressions": 10683,
+              "clicks": 106,
+              "conversions": 7,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-12",
+              "spend": 42642,
+              "revenue": 288612,
+              "impressions": 10729,
+              "clicks": 112,
+              "conversions": 7,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-13",
+              "spend": 41524,
+              "revenue": 361229,
+              "impressions": 12302,
+              "clicks": 134,
+              "conversions": 8,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-14",
+              "spend": 35607,
+              "revenue": 387065,
+              "impressions": 12946,
+              "clicks": 122,
+              "conversions": 8,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-15",
+              "spend": 42626,
+              "revenue": 361827,
+              "impressions": 14074,
+              "clicks": 140,
+              "conversions": 9,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-16",
+              "spend": 44638,
+              "revenue": 356771,
+              "impressions": 13729,
+              "clicks": 136,
+              "conversions": 8,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-17",
+              "spend": 39331,
+              "revenue": 370162,
+              "impressions": 12264,
+              "clicks": 115,
+              "conversions": 9,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-18",
+              "spend": 36783,
+              "revenue": 310650,
+              "impressions": 13159,
+              "clicks": 131,
+              "conversions": 7,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-19",
+              "spend": 42093,
+              "revenue": 351034,
+              "impressions": 12764,
+              "clicks": 121,
+              "conversions": 8,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-20",
+              "spend": 48086,
+              "revenue": 405026,
+              "impressions": 12935,
+              "clicks": 126,
+              "conversions": 9,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-21",
+              "spend": 47171,
+              "revenue": 371889,
+              "impressions": 15157,
+              "clicks": 143,
+              "conversions": 9,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-22",
+              "spend": 45977,
+              "revenue": 415916,
+              "impressions": 14569,
+              "clicks": 143,
+              "conversions": 9,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-23",
+              "spend": 39083,
+              "revenue": 347480,
+              "impressions": 13334,
+              "clicks": 148,
+              "conversions": 8,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-24",
+              "spend": 40649,
+              "revenue": 369855,
+              "impressions": 13962,
+              "clicks": 141,
+              "conversions": 8,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-25",
+              "spend": 50728,
+              "revenue": 394178,
+              "impressions": 12819,
+              "clicks": 122,
+              "conversions": 9,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-26",
+              "spend": 49276,
+              "revenue": 349026,
+              "impressions": 12702,
+              "clicks": 148,
+              "conversions": 9,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-27",
+              "spend": 48957,
+              "revenue": 430524,
+              "impressions": 14405,
+              "clicks": 148,
+              "conversions": 10,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-28",
+              "spend": 40657,
+              "revenue": 470457,
+              "impressions": 14907,
+              "clicks": 146,
+              "conversions": 9,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-29",
+              "spend": 45976,
+              "revenue": 439492,
+              "impressions": 16116,
+              "clicks": 166,
+              "conversions": 10,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-30",
+              "spend": 44206,
+              "revenue": 442876,
+              "impressions": 15484,
+              "clicks": 152,
+              "conversions": 10,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-31",
+              "spend": 48697,
+              "revenue": 387355,
+              "impressions": 15707,
+              "clicks": 135,
+              "conversions": 9,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-08-01",
+              "spend": 48545,
+              "revenue": 392617,
+              "impressions": 15050,
+              "clicks": 148,
+              "conversions": 9,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-08-02",
+              "spend": 40609,
+              "revenue": 366091,
+              "impressions": 13990,
+              "clicks": 141,
+              "conversions": 8,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-08-03",
+              "spend": 46350,
+              "revenue": 402659,
+              "impressions": 14595,
+              "clicks": 167,
+              "conversions": 10,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-08-04",
+              "spend": 54703,
+              "revenue": 490941,
+              "impressions": 16379,
+              "clicks": 165,
+              "conversions": 11,
+              "new_customers": 3
+            }
+          ]
+        },
+        {
+          "utm_campaign": "쇼핑검색광고_원피스",
+          "ltv": 232000,
+          "daily": [
+            {
+              "date": "2026-07-06",
+              "spend": 76999,
+              "revenue": 397629,
+              "impressions": 15710,
+              "clicks": 135,
+              "conversions": 5,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-07",
+              "spend": 70322,
+              "revenue": 465559,
+              "impressions": 15888,
+              "clicks": 155,
+              "conversions": 6,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-08",
+              "spend": 65507,
+              "revenue": 463250,
+              "impressions": 16696,
+              "clicks": 155,
+              "conversions": 5,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-09",
+              "spend": 71023,
+              "revenue": 388050,
+              "impressions": 15214,
+              "clicks": 162,
+              "conversions": 7,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-10",
+              "spend": 80326,
+              "revenue": 358389,
+              "impressions": 14638,
+              "clicks": 150,
+              "conversions": 5,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-11",
+              "spend": 82297,
+              "revenue": 382542,
+              "impressions": 15686,
+              "clicks": 131,
+              "conversions": 5,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-12",
+              "spend": 82283,
+              "revenue": 380179,
+              "impressions": 16495,
+              "clicks": 131,
+              "conversions": 5,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-13",
+              "spend": 68970,
+              "revenue": 447624,
+              "impressions": 16733,
+              "clicks": 152,
+              "conversions": 5,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-14",
+              "spend": 69530,
+              "revenue": 468154,
+              "impressions": 18428,
+              "clicks": 157,
+              "conversions": 5,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-15",
+              "spend": 71069,
+              "revenue": 410327,
+              "impressions": 17743,
+              "clicks": 171,
+              "conversions": 7,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-16",
+              "spend": 89242,
+              "revenue": 435484,
+              "impressions": 17700,
+              "clicks": 174,
+              "conversions": 7,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-17",
+              "spend": 75238,
+              "revenue": 476693,
+              "impressions": 17824,
+              "clicks": 155,
+              "conversions": 5,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-18",
+              "spend": 66108,
+              "revenue": 426331,
+              "impressions": 16986,
+              "clicks": 141,
+              "conversions": 6,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-19",
+              "spend": 72438,
+              "revenue": 399353,
+              "impressions": 15803,
+              "clicks": 162,
+              "conversions": 5,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-20",
+              "spend": 79002,
+              "revenue": 500326,
+              "impressions": 19370,
+              "clicks": 164,
+              "conversions": 7,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-21",
+              "spend": 89979,
+              "revenue": 487031,
+              "impressions": 18681,
+              "clicks": 162,
+              "conversions": 7,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-22",
+              "spend": 82927,
+              "revenue": 451498,
+              "impressions": 18609,
+              "clicks": 185,
+              "conversions": 7,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-23",
+              "spend": 81843,
+              "revenue": 511814,
+              "impressions": 19298,
+              "clicks": 168,
+              "conversions": 7,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-24",
+              "spend": 82819,
+              "revenue": 440917,
+              "impressions": 17998,
+              "clicks": 181,
+              "conversions": 5,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-25",
+              "spend": 80988,
+              "revenue": 497054,
+              "impressions": 18643,
+              "clicks": 165,
+              "conversions": 7,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-26",
+              "spend": 88284,
+              "revenue": 487058,
+              "impressions": 18597,
+              "clicks": 174,
+              "conversions": 7,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-27",
+              "spend": 75267,
+              "revenue": 445588,
+              "impressions": 18620,
+              "clicks": 166,
+              "conversions": 7,
+              "new_customers": 4
+            },
+            {
+              "date": "2026-07-28",
+              "spend": 80123,
+              "revenue": 578917,
+              "impressions": 21750,
+              "clicks": 205,
+              "conversions": 7,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-29",
+              "spend": 77788,
+              "revenue": 510365,
+              "impressions": 20857,
+              "clicks": 188,
+              "conversions": 7,
+              "new_customers": 4
+            },
+            {
+              "date": "2026-07-30",
+              "spend": 97717,
+              "revenue": 485914,
+              "impressions": 19101,
+              "clicks": 179,
+              "conversions": 7,
+              "new_customers": 4
+            },
+            {
+              "date": "2026-07-31",
+              "spend": 92386,
+              "revenue": 510176,
+              "impressions": 20205,
+              "clicks": 184,
+              "conversions": 7,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-08-01",
+              "spend": 79059,
+              "revenue": 482860,
+              "impressions": 18620,
+              "clicks": 176,
+              "conversions": 7,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-08-02",
+              "spend": 84750,
+              "revenue": 540636,
+              "impressions": 21033,
+              "clicks": 193,
+              "conversions": 7,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-08-03",
+              "spend": 83012,
+              "revenue": 561124,
+              "impressions": 21352,
+              "clicks": 197,
+              "conversions": 8,
+              "new_customers": 4
+            },
+            {
+              "date": "2026-08-04",
+              "spend": 102705,
+              "revenue": 509160,
+              "impressions": 21177,
+              "clicks": 186,
+              "conversions": 7,
+              "new_customers": 4
+            }
+          ]
+        },
+        {
+          "utm_campaign": "파워링크_니트",
+          "ltv": 215000,
+          "daily": [
+            {
+              "date": "2026-07-06",
+              "spend": 63133,
+              "revenue": 293276,
+              "impressions": 10766,
+              "clicks": 95,
+              "conversions": 4,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-07",
+              "spend": 67212,
+              "revenue": 288076,
+              "impressions": 12336,
+              "clicks": 115,
+              "conversions": 3,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-08",
+              "spend": 59099,
+              "revenue": 306210,
+              "impressions": 13448,
+              "clicks": 110,
+              "conversions": 4,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-09",
+              "spend": 49978,
+              "revenue": 270186,
+              "impressions": 11821,
+              "clicks": 119,
+              "conversions": 4,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-10",
+              "spend": 53919,
+              "revenue": 262174,
+              "impressions": 11910,
+              "clicks": 107,
+              "conversions": 3,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-11",
+              "spend": 64336,
+              "revenue": 294769,
+              "impressions": 12252,
+              "clicks": 96,
+              "conversions": 3,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-12",
+              "spend": 60755,
+              "revenue": 312943,
+              "impressions": 11440,
+              "clicks": 110,
+              "conversions": 3,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-13",
+              "spend": 59292,
+              "revenue": 309118,
+              "impressions": 13081,
+              "clicks": 111,
+              "conversions": 4,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-14",
+              "spend": 56988,
+              "revenue": 345168,
+              "impressions": 12639,
+              "clicks": 112,
+              "conversions": 4,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-15",
+              "spend": 55502,
+              "revenue": 322976,
+              "impressions": 13776,
+              "clicks": 129,
+              "conversions": 4,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-16",
+              "spend": 69554,
+              "revenue": 313183,
+              "impressions": 13533,
+              "clicks": 119,
+              "conversions": 4,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-17",
+              "spend": 61581,
+              "revenue": 325087,
+              "impressions": 12064,
+              "clicks": 121,
+              "conversions": 4,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-18",
+              "spend": 62996,
+              "revenue": 306469,
+              "impressions": 12036,
+              "clicks": 105,
+              "conversions": 3,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-19",
+              "spend": 59186,
+              "revenue": 269866,
+              "impressions": 13648,
+              "clicks": 116,
+              "conversions": 4,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-20",
+              "spend": 61495,
+              "revenue": 355742,
+              "impressions": 14807,
+              "clicks": 131,
+              "conversions": 4,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-21",
+              "spend": 73381,
+              "revenue": 326389,
+              "impressions": 14838,
+              "clicks": 124,
+              "conversions": 4,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-22",
+              "spend": 64593,
+              "revenue": 320784,
+              "impressions": 15476,
+              "clicks": 136,
+              "conversions": 5,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-23",
+              "spend": 54710,
+              "revenue": 344197,
+              "impressions": 14202,
+              "clicks": 142,
+              "conversions": 4,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-24",
+              "spend": 63374,
+              "revenue": 317119,
+              "impressions": 13973,
+              "clicks": 123,
+              "conversions": 5,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-25",
+              "spend": 64955,
+              "revenue": 338809,
+              "impressions": 12814,
+              "clicks": 128,
+              "conversions": 4,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-26",
+              "spend": 64848,
+              "revenue": 333153,
+              "impressions": 14310,
+              "clicks": 117,
+              "conversions": 4,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-27",
+              "spend": 64950,
+              "revenue": 322631,
+              "impressions": 13774,
+              "clicks": 140,
+              "conversions": 5,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-28",
+              "spend": 59057,
+              "revenue": 396866,
+              "impressions": 15543,
+              "clicks": 152,
+              "conversions": 5,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-29",
+              "spend": 66838,
+              "revenue": 369221,
+              "impressions": 16779,
+              "clicks": 145,
+              "conversions": 5,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-30",
+              "spend": 72295,
+              "revenue": 326381,
+              "impressions": 14828,
+              "clicks": 145,
+              "conversions": 5,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-31",
+              "spend": 79016,
+              "revenue": 364695,
+              "impressions": 15095,
+              "clicks": 129,
+              "conversions": 4,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-08-01",
+              "spend": 71226,
+              "revenue": 325489,
+              "impressions": 15662,
+              "clicks": 130,
+              "conversions": 4,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-08-02",
+              "spend": 59574,
+              "revenue": 386436,
+              "impressions": 14591,
+              "clicks": 124,
+              "conversions": 5,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-08-03",
+              "spend": 62226,
+              "revenue": 383993,
+              "impressions": 16188,
+              "clicks": 135,
+              "conversions": 5,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-08-04",
+              "spend": 73926,
+              "revenue": 368595,
+              "impressions": 15414,
+              "clicks": 159,
+              "conversions": 5,
+              "new_customers": 3
+            }
+          ]
+        },
+        {
+          "utm_campaign": "GFA_리타겟팅",
+          "ltv": 198000,
+          "daily": [
+            {
+              "date": "2026-07-06",
+              "spend": 50007,
+              "revenue": 235009,
+              "impressions": 10728,
+              "clicks": 98,
+              "conversions": 3,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-07",
+              "spend": 55886,
+              "revenue": 218576,
+              "impressions": 12729,
+              "clicks": 114,
+              "conversions": 3,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-08",
+              "spend": 46926,
+              "revenue": 245905,
+              "impressions": 12312,
+              "clicks": 124,
+              "conversions": 3,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-09",
+              "spend": 41526,
+              "revenue": 204800,
+              "impressions": 11219,
+              "clicks": 109,
+              "conversions": 4,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-10",
+              "spend": 51776,
+              "revenue": 213655,
+              "impressions": 11838,
+              "clicks": 109,
+              "conversions": 3,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-11",
+              "spend": 52954,
+              "revenue": 226447,
+              "impressions": 10809,
+              "clicks": 95,
+              "conversions": 3,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-12",
+              "spend": 47493,
+              "revenue": 200945,
+              "impressions": 12250,
+              "clicks": 105,
+              "conversions": 3,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-13",
+              "spend": 48836,
+              "revenue": 237426,
+              "impressions": 12433,
+              "clicks": 121,
+              "conversions": 3,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-14",
+              "spend": 45164,
+              "revenue": 270757,
+              "impressions": 12390,
+              "clicks": 116,
+              "conversions": 4,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-15",
+              "spend": 56380,
+              "revenue": 239251,
+              "impressions": 14002,
+              "clicks": 127,
+              "conversions": 3,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-16",
+              "spend": 59139,
+              "revenue": 234929,
+              "impressions": 12719,
+              "clicks": 124,
+              "conversions": 4,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-17",
+              "spend": 49891,
+              "revenue": 257834,
+              "impressions": 12826,
+              "clicks": 110,
+              "conversions": 4,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-18",
+              "spend": 48915,
+              "revenue": 204141,
+              "impressions": 11300,
+              "clicks": 110,
+              "conversions": 4,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-19",
+              "spend": 53145,
+              "revenue": 244831,
+              "impressions": 12374,
+              "clicks": 105,
+              "conversions": 3,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-20",
+              "spend": 51857,
+              "revenue": 267624,
+              "impressions": 14045,
+              "clicks": 116,
+              "conversions": 3,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-21",
+              "spend": 59083,
+              "revenue": 259840,
+              "impressions": 13524,
+              "clicks": 138,
+              "conversions": 4,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-22",
+              "spend": 49269,
+              "revenue": 274374,
+              "impressions": 14669,
+              "clicks": 145,
+              "conversions": 4,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-23",
+              "spend": 49002,
+              "revenue": 243195,
+              "impressions": 12914,
+              "clicks": 131,
+              "conversions": 4,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-24",
+              "spend": 54880,
+              "revenue": 237804,
+              "impressions": 13135,
+              "clicks": 129,
+              "conversions": 4,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-25",
+              "spend": 53702,
+              "revenue": 268799,
+              "impressions": 13613,
+              "clicks": 117,
+              "conversions": 3,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-26",
+              "spend": 63322,
+              "revenue": 241023,
+              "impressions": 13054,
+              "clicks": 132,
+              "conversions": 3,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-27",
+              "spend": 54352,
+              "revenue": 281273,
+              "impressions": 15307,
+              "clicks": 126,
+              "conversions": 4,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-28",
+              "spend": 52362,
+              "revenue": 255448,
+              "impressions": 14145,
+              "clicks": 143,
+              "conversions": 4,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-29",
+              "spend": 50800,
+              "revenue": 286474,
+              "impressions": 15910,
+              "clicks": 155,
+              "conversions": 4,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-30",
+              "spend": 57671,
+              "revenue": 305291,
+              "impressions": 15741,
+              "clicks": 135,
+              "conversions": 5,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-31",
+              "spend": 66112,
+              "revenue": 251841,
+              "impressions": 14193,
+              "clicks": 138,
+              "conversions": 4,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-08-01",
+              "spend": 51619,
+              "revenue": 270848,
+              "impressions": 14215,
+              "clicks": 121,
+              "conversions": 4,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-08-02",
+              "spend": 55400,
+              "revenue": 302765,
+              "impressions": 13705,
+              "clicks": 133,
+              "conversions": 4,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-08-03",
+              "spend": 60670,
+              "revenue": 278009,
+              "impressions": 14759,
+              "clicks": 152,
+              "conversions": 4,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-08-04",
+              "spend": 61864,
+              "revenue": 320884,
+              "impressions": 17148,
+              "clicks": 143,
+              "conversions": 5,
+              "new_customers": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "google",
+      "name": "Google",
+      "badge": "G",
+      "cls": "b-g",
+      "source": "google",
+      "color": "#EA4335",
+      "campaigns": [
+        {
+          "utm_campaign": "검색_브랜드",
+          "ltv": 248000,
+          "daily": [
+            {
+              "date": "2026-07-06",
+              "spend": 76515,
+              "revenue": 462200,
+              "impressions": 12876,
+              "clicks": 128,
+              "conversions": 5,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-07",
+              "spend": 80566,
+              "revenue": 427181,
+              "impressions": 15280,
+              "clicks": 124,
+              "conversions": 5,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-08",
+              "spend": 65238,
+              "revenue": 537574,
+              "impressions": 16027,
+              "clicks": 124,
+              "conversions": 5,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-09",
+              "spend": 70357,
+              "revenue": 452465,
+              "impressions": 14678,
+              "clicks": 129,
+              "conversions": 7,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-10",
+              "spend": 74638,
+              "revenue": 413145,
+              "impressions": 14209,
+              "clicks": 119,
+              "conversions": 5,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-11",
+              "spend": 76335,
+              "revenue": 440036,
+              "impressions": 12974,
+              "clicks": 123,
+              "conversions": 5,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-12",
+              "spend": 76374,
+              "revenue": 437652,
+              "impressions": 13663,
+              "clicks": 124,
+              "conversions": 5,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-13",
+              "spend": 63893,
+              "revenue": 514304,
+              "impressions": 13802,
+              "clicks": 142,
+              "conversions": 5,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-14",
+              "spend": 69064,
+              "revenue": 532279,
+              "impressions": 15112,
+              "clicks": 133,
+              "conversions": 5,
+              "new_customers": 4
+            },
+            {
+              "date": "2026-07-15",
+              "spend": 70845,
+              "revenue": 467319,
+              "impressions": 17053,
+              "clicks": 146,
+              "conversions": 7,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-16",
+              "spend": 73588,
+              "revenue": 461503,
+              "impressions": 16738,
+              "clicks": 129,
+              "conversions": 5,
+              "new_customers": 4
+            },
+            {
+              "date": "2026-07-17",
+              "spend": 76167,
+              "revenue": 509341,
+              "impressions": 14416,
+              "clicks": 136,
+              "conversions": 5,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-18",
+              "spend": 67053,
+              "revenue": 453363,
+              "impressions": 13710,
+              "clicks": 124,
+              "conversions": 7,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-19",
+              "spend": 73116,
+              "revenue": 537628,
+              "impressions": 15005,
+              "clicks": 143,
+              "conversions": 5,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-20",
+              "spend": 79081,
+              "revenue": 528073,
+              "impressions": 15810,
+              "clicks": 136,
+              "conversions": 7,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-21",
+              "spend": 89737,
+              "revenue": 510934,
+              "impressions": 17822,
+              "clicks": 160,
+              "conversions": 7,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-22",
+              "spend": 82812,
+              "revenue": 603901,
+              "impressions": 17784,
+              "clicks": 153,
+              "conversions": 7,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-23",
+              "spend": 67069,
+              "revenue": 539039,
+              "impressions": 15672,
+              "clicks": 139,
+              "conversions": 7,
+              "new_customers": 4
+            },
+            {
+              "date": "2026-07-24",
+              "spend": 66962,
+              "revenue": 466912,
+              "impressions": 17274,
+              "clicks": 133,
+              "conversions": 5,
+              "new_customers": 4
+            },
+            {
+              "date": "2026-07-25",
+              "spend": 80362,
+              "revenue": 530802,
+              "impressions": 15309,
+              "clicks": 145,
+              "conversions": 7,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-26",
+              "spend": 80738,
+              "revenue": 526771,
+              "impressions": 16079,
+              "clicks": 146,
+              "conversions": 7,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-27",
+              "spend": 84427,
+              "revenue": 611296,
+              "impressions": 16076,
+              "clicks": 138,
+              "conversions": 7,
+              "new_customers": 4
+            },
+            {
+              "date": "2026-07-28",
+              "spend": 73409,
+              "revenue": 627426,
+              "impressions": 18821,
+              "clicks": 172,
+              "conversions": 7,
+              "new_customers": 4
+            },
+            {
+              "date": "2026-07-29",
+              "spend": 71052,
+              "revenue": 549852,
+              "impressions": 18024,
+              "clicks": 157,
+              "conversions": 7,
+              "new_customers": 4
+            },
+            {
+              "date": "2026-07-30",
+              "spend": 88886,
+              "revenue": 516255,
+              "impressions": 16619,
+              "clicks": 148,
+              "conversions": 7,
+              "new_customers": 4
+            },
+            {
+              "date": "2026-07-31",
+              "spend": 83748,
+              "revenue": 544879,
+              "impressions": 17607,
+              "clicks": 153,
+              "conversions": 7,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-08-01",
+              "spend": 87493,
+              "revenue": 514752,
+              "impressions": 16211,
+              "clicks": 145,
+              "conversions": 7,
+              "new_customers": 4
+            },
+            {
+              "date": "2026-08-02",
+              "spend": 76995,
+              "revenue": 579038,
+              "impressions": 18339,
+              "clicks": 160,
+              "conversions": 7,
+              "new_customers": 4
+            },
+            {
+              "date": "2026-08-03",
+              "spend": 77447,
+              "revenue": 607143,
+              "impressions": 18184,
+              "clicks": 165,
+              "conversions": 8,
+              "new_customers": 4
+            },
+            {
+              "date": "2026-08-04",
+              "spend": 96028,
+              "revenue": 696936,
+              "impressions": 17991,
+              "clicks": 186,
+              "conversions": 7,
+              "new_customers": 4
+            }
+          ]
+        },
+        {
+          "utm_campaign": "PMax_전상품",
+          "ltv": 208000,
+          "daily": [
+            {
+              "date": "2026-07-06",
+              "spend": 124624,
+              "revenue": 594615,
+              "impressions": 19056,
+              "clicks": 170,
+              "conversions": 5,
+              "new_customers": 4
+            },
+            {
+              "date": "2026-07-07",
+              "spend": 133771,
+              "revenue": 580986,
+              "impressions": 21766,
+              "clicks": 171,
+              "conversions": 5,
+              "new_customers": 4
+            },
+            {
+              "date": "2026-07-08",
+              "spend": 130126,
+              "revenue": 693539,
+              "impressions": 21850,
+              "clicks": 179,
+              "conversions": 5,
+              "new_customers": 5
+            },
+            {
+              "date": "2026-07-09",
+              "spend": 110004,
+              "revenue": 615307,
+              "impressions": 22491,
+              "clicks": 195,
+              "conversions": 5,
+              "new_customers": 4
+            },
+            {
+              "date": "2026-07-10",
+              "spend": 130972,
+              "revenue": 534474,
+              "impressions": 20838,
+              "clicks": 158,
+              "conversions": 5,
+              "new_customers": 4
+            },
+            {
+              "date": "2026-07-11",
+              "spend": 155186,
+              "revenue": 605062,
+              "impressions": 18309,
+              "clicks": 171,
+              "conversions": 5,
+              "new_customers": 4
+            },
+            {
+              "date": "2026-07-12",
+              "spend": 133738,
+              "revenue": 567791,
+              "impressions": 18389,
+              "clicks": 181,
+              "conversions": 5,
+              "new_customers": 4
+            },
+            {
+              "date": "2026-07-13",
+              "spend": 130545,
+              "revenue": 706705,
+              "impressions": 21081,
+              "clicks": 182,
+              "conversions": 5,
+              "new_customers": 5
+            },
+            {
+              "date": "2026-07-14",
+              "spend": 112619,
+              "revenue": 700247,
+              "impressions": 22012,
+              "clicks": 196,
+              "conversions": 5,
+              "new_customers": 5
+            },
+            {
+              "date": "2026-07-15",
+              "spend": 135074,
+              "revenue": 651845,
+              "impressions": 23938,
+              "clicks": 188,
+              "conversions": 7,
+              "new_customers": 4
+            },
+            {
+              "date": "2026-07-16",
+              "spend": 147941,
+              "revenue": 705098,
+              "impressions": 24103,
+              "clicks": 214,
+              "conversions": 6,
+              "new_customers": 5
+            },
+            {
+              "date": "2026-07-17",
+              "spend": 130588,
+              "revenue": 728826,
+              "impressions": 21567,
+              "clicks": 182,
+              "conversions": 5,
+              "new_customers": 4
+            },
+            {
+              "date": "2026-07-18",
+              "spend": 122041,
+              "revenue": 615612,
+              "impressions": 19731,
+              "clicks": 172,
+              "conversions": 5,
+              "new_customers": 4
+            },
+            {
+              "date": "2026-07-19",
+              "spend": 139292,
+              "revenue": 692730,
+              "impressions": 22421,
+              "clicks": 191,
+              "conversions": 5,
+              "new_customers": 5
+            },
+            {
+              "date": "2026-07-20",
+              "spend": 157657,
+              "revenue": 637296,
+              "impressions": 22580,
+              "clicks": 200,
+              "conversions": 5,
+              "new_customers": 4
+            },
+            {
+              "date": "2026-07-21",
+              "spend": 154783,
+              "revenue": 744688,
+              "impressions": 26405,
+              "clicks": 226,
+              "conversions": 7,
+              "new_customers": 5
+            },
+            {
+              "date": "2026-07-22",
+              "spend": 150817,
+              "revenue": 828715,
+              "impressions": 25412,
+              "clicks": 226,
+              "conversions": 5,
+              "new_customers": 5
+            },
+            {
+              "date": "2026-07-23",
+              "spend": 128320,
+              "revenue": 698326,
+              "impressions": 23291,
+              "clicks": 197,
+              "conversions": 7,
+              "new_customers": 5
+            },
+            {
+              "date": "2026-07-24",
+              "spend": 137356,
+              "revenue": 714378,
+              "impressions": 24518,
+              "clicks": 217,
+              "conversions": 7,
+              "new_customers": 5
+            },
+            {
+              "date": "2026-07-25",
+              "spend": 140574,
+              "revenue": 759962,
+              "impressions": 22548,
+              "clicks": 191,
+              "conversions": 5,
+              "new_customers": 5
+            },
+            {
+              "date": "2026-07-26",
+              "spend": 163179,
+              "revenue": 691274,
+              "impressions": 22366,
+              "clicks": 200,
+              "conversions": 5,
+              "new_customers": 5
+            },
+            {
+              "date": "2026-07-27",
+              "spend": 132886,
+              "revenue": 667332,
+              "impressions": 25317,
+              "clicks": 197,
+              "conversions": 7,
+              "new_customers": 5
+            },
+            {
+              "date": "2026-07-28",
+              "spend": 134776,
+              "revenue": 734126,
+              "impressions": 26218,
+              "clicks": 234,
+              "conversions": 7,
+              "new_customers": 5
+            },
+            {
+              "date": "2026-07-29",
+              "spend": 152167,
+              "revenue": 866888,
+              "impressions": 28297,
+              "clicks": 222,
+              "conversions": 7,
+              "new_customers": 5
+            },
+            {
+              "date": "2026-07-30",
+              "spend": 148245,
+              "revenue": 863297,
+              "impressions": 26998,
+              "clicks": 243,
+              "conversions": 7,
+              "new_customers": 5
+            },
+            {
+              "date": "2026-07-31",
+              "spend": 162891,
+              "revenue": 757254,
+              "impressions": 23376,
+              "clicks": 218,
+              "conversions": 7,
+              "new_customers": 5
+            },
+            {
+              "date": "2026-08-01",
+              "spend": 162026,
+              "revenue": 766662,
+              "impressions": 26222,
+              "clicks": 200,
+              "conversions": 6,
+              "new_customers": 5
+            },
+            {
+              "date": "2026-08-02",
+              "spend": 136047,
+              "revenue": 717180,
+              "impressions": 24424,
+              "clicks": 229,
+              "conversions": 7,
+              "new_customers": 5
+            },
+            {
+              "date": "2026-08-03",
+              "spend": 153521,
+              "revenue": 797053,
+              "impressions": 25692,
+              "clicks": 229,
+              "conversions": 8,
+              "new_customers": 5
+            },
+            {
+              "date": "2026-08-04",
+              "spend": 148229,
+              "revenue": 762732,
+              "impressions": 28782,
+              "clicks": 224,
+              "conversions": 7,
+              "new_customers": 5
+            }
+          ]
+        },
+        {
+          "utm_campaign": "쇼핑_러닝화",
+          "ltv": 195000,
+          "daily": [
+            {
+              "date": "2026-07-06",
+              "spend": 94478,
+              "revenue": 364519,
+              "impressions": 13617,
+              "clicks": 119,
+              "conversions": 3,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-07",
+              "spend": 105536,
+              "revenue": 428204,
+              "impressions": 13741,
+              "clicks": 138,
+              "conversions": 4,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-08",
+              "spend": 88640,
+              "revenue": 378965,
+              "impressions": 15602,
+              "clicks": 126,
+              "conversions": 3,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-09",
+              "spend": 78462,
+              "revenue": 404152,
+              "impressions": 14254,
+              "clicks": 131,
+              "conversions": 3,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-10",
+              "spend": 98666,
+              "revenue": 412571,
+              "impressions": 14868,
+              "clicks": 111,
+              "conversions": 3,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-11",
+              "spend": 101010,
+              "revenue": 346174,
+              "impressions": 13602,
+              "clicks": 116,
+              "conversions": 3,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-12",
+              "spend": 90696,
+              "revenue": 390460,
+              "impressions": 13153,
+              "clicks": 127,
+              "conversions": 3,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-13",
+              "spend": 93095,
+              "revenue": 360236,
+              "impressions": 15626,
+              "clicks": 123,
+              "conversions": 3,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-14",
+              "spend": 83647,
+              "revenue": 429364,
+              "impressions": 15976,
+              "clicks": 141,
+              "conversions": 3,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-15",
+              "spend": 104608,
+              "revenue": 479512,
+              "impressions": 15350,
+              "clicks": 128,
+              "conversions": 4,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-16",
+              "spend": 96553,
+              "revenue": 434073,
+              "impressions": 17102,
+              "clicks": 129,
+              "conversions": 3,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-17",
+              "spend": 99895,
+              "revenue": 374810,
+              "impressions": 14743,
+              "clicks": 136,
+              "conversions": 4,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-18",
+              "spend": 97495,
+              "revenue": 378671,
+              "impressions": 15253,
+              "clicks": 136,
+              "conversions": 3,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-19",
+              "spend": 87114,
+              "revenue": 449922,
+              "impressions": 14193,
+              "clicks": 131,
+              "conversions": 4,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-20",
+              "spend": 104687,
+              "revenue": 391646,
+              "impressions": 16041,
+              "clicks": 143,
+              "conversions": 4,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-21",
+              "spend": 118674,
+              "revenue": 484738,
+              "impressions": 18081,
+              "clicks": 141,
+              "conversions": 4,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-22",
+              "spend": 99817,
+              "revenue": 510621,
+              "impressions": 16712,
+              "clicks": 148,
+              "conversions": 4,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-23",
+              "spend": 98727,
+              "revenue": 455684,
+              "impressions": 17329,
+              "clicks": 134,
+              "conversions": 4,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-24",
+              "spend": 89722,
+              "revenue": 449833,
+              "impressions": 15050,
+              "clicks": 133,
+              "conversions": 3,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-25",
+              "spend": 107457,
+              "revenue": 399826,
+              "impressions": 15654,
+              "clicks": 145,
+              "conversions": 4,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-26",
+              "spend": 102610,
+              "revenue": 465601,
+              "impressions": 16886,
+              "clicks": 136,
+              "conversions": 4,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-27",
+              "spend": 107629,
+              "revenue": 426116,
+              "impressions": 16921,
+              "clicks": 155,
+              "conversions": 4,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-28",
+              "spend": 103545,
+              "revenue": 496700,
+              "impressions": 18343,
+              "clicks": 147,
+              "conversions": 5,
+              "new_customers": 4
+            },
+            {
+              "date": "2026-07-29",
+              "spend": 100848,
+              "revenue": 551426,
+              "impressions": 17523,
+              "clicks": 161,
+              "conversions": 5,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-30",
+              "spend": 113241,
+              "revenue": 458967,
+              "impressions": 17504,
+              "clicks": 167,
+              "conversions": 4,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-31",
+              "spend": 106492,
+              "revenue": 482302,
+              "impressions": 18476,
+              "clicks": 143,
+              "conversions": 5,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-08-01",
+              "spend": 101577,
+              "revenue": 514297,
+              "impressions": 15750,
+              "clicks": 150,
+              "conversions": 4,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-08-02",
+              "spend": 108450,
+              "revenue": 457327,
+              "impressions": 17888,
+              "clicks": 138,
+              "conversions": 4,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-08-03",
+              "spend": 96419,
+              "revenue": 536391,
+              "impressions": 19387,
+              "clicks": 155,
+              "conversions": 5,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-08-04",
+              "spend": 120210,
+              "revenue": 486893,
+              "impressions": 19243,
+              "clicks": 174,
+              "conversions": 5,
+              "new_customers": 4
+            }
+          ]
+        },
+        {
+          "utm_campaign": "디스커버리_리타겟",
+          "ltv": 176000,
+          "daily": [
+            {
+              "date": "2026-07-06",
+              "spend": 83240,
+              "revenue": 223019,
+              "impressions": 10584,
+              "clicks": 97,
+              "conversions": 2,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-07",
+              "spend": 72486,
+              "revenue": 218104,
+              "impressions": 12086,
+              "clicks": 98,
+              "conversions": 2,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-08",
+              "spend": 77891,
+              "revenue": 232240,
+              "impressions": 11226,
+              "clicks": 93,
+              "conversions": 2,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-09",
+              "spend": 65940,
+              "revenue": 260519,
+              "impressions": 11605,
+              "clicks": 102,
+              "conversions": 2,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-10",
+              "spend": 70421,
+              "revenue": 200695,
+              "impressions": 11571,
+              "clicks": 90,
+              "conversions": 2,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-11",
+              "spend": 84031,
+              "revenue": 226869,
+              "impressions": 10171,
+              "clicks": 98,
+              "conversions": 2,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-12",
+              "spend": 79352,
+              "revenue": 241108,
+              "impressions": 11133,
+              "clicks": 95,
+              "conversions": 2,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-13",
+              "spend": 77445,
+              "revenue": 237464,
+              "impressions": 12696,
+              "clicks": 95,
+              "conversions": 2,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-14",
+              "spend": 75133,
+              "revenue": 262611,
+              "impressions": 12226,
+              "clicks": 114,
+              "conversions": 2,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-15",
+              "spend": 73258,
+              "revenue": 244674,
+              "impressions": 13293,
+              "clicks": 109,
+              "conversions": 3,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-16",
+              "spend": 94486,
+              "revenue": 274446,
+              "impressions": 12429,
+              "clicks": 113,
+              "conversions": 3,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-17",
+              "spend": 83904,
+              "revenue": 224512,
+              "impressions": 11072,
+              "clicks": 96,
+              "conversions": 2,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-18",
+              "spend": 70293,
+              "revenue": 210586,
+              "impressions": 11050,
+              "clicks": 100,
+              "conversions": 2,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-19",
+              "spend": 80488,
+              "revenue": 238733,
+              "impressions": 12543,
+              "clicks": 110,
+              "conversions": 2,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-20",
+              "spend": 83038,
+              "revenue": 249455,
+              "impressions": 13708,
+              "clicks": 105,
+              "conversions": 2,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-21",
+              "spend": 98722,
+              "revenue": 290152,
+              "impressions": 13734,
+              "clicks": 120,
+              "conversions": 2,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-22",
+              "spend": 87088,
+              "revenue": 286300,
+              "impressions": 14324,
+              "clicks": 109,
+              "conversions": 3,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-23",
+              "spend": 73950,
+              "revenue": 304149,
+              "impressions": 13143,
+              "clicks": 114,
+              "conversions": 2,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-24",
+              "spend": 87665,
+              "revenue": 284224,
+              "impressions": 12636,
+              "clicks": 115,
+              "conversions": 3,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-25",
+              "spend": 90247,
+              "revenue": 239480,
+              "impressions": 11569,
+              "clicks": 100,
+              "conversions": 2,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-26",
+              "spend": 92124,
+              "revenue": 240223,
+              "impressions": 13148,
+              "clicks": 112,
+              "conversions": 3,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-27",
+              "spend": 91700,
+              "revenue": 297143,
+              "impressions": 12641,
+              "clicks": 112,
+              "conversions": 2,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-28",
+              "spend": 83565,
+              "revenue": 287747,
+              "impressions": 14274,
+              "clicks": 121,
+              "conversions": 3,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-29",
+              "spend": 77185,
+              "revenue": 265262,
+              "impressions": 15419,
+              "clicks": 138,
+              "conversions": 3,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-30",
+              "spend": 100967,
+              "revenue": 305552,
+              "impressions": 13501,
+              "clicks": 114,
+              "conversions": 3,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-31",
+              "spend": 90971,
+              "revenue": 266796,
+              "impressions": 13760,
+              "clicks": 122,
+              "conversions": 3,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-08-01",
+              "spend": 81705,
+              "revenue": 301951,
+              "impressions": 14293,
+              "clicks": 122,
+              "conversions": 3,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-08-02",
+              "spend": 83633,
+              "revenue": 283998,
+              "impressions": 13292,
+              "clicks": 117,
+              "conversions": 3,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-08-03",
+              "spend": 86633,
+              "revenue": 270329,
+              "impressions": 14871,
+              "clicks": 129,
+              "conversions": 3,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-08-04",
+              "spend": 102441,
+              "revenue": 331658,
+              "impressions": 16616,
+              "clicks": 127,
+              "conversions": 3,
+              "new_customers": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "meta",
+      "name": "Meta",
+      "badge": "M",
+      "cls": "b-m",
+      "source": "facebook",
+      "color": "#0866FF",
+      "campaigns": [
+        {
+          "utm_campaign": "리타겟_장바구니",
+          "ltv": 196000,
+          "daily": [
+            {
+              "date": "2026-07-06",
+              "spend": 56670,
+              "revenue": 261167,
+              "impressions": 17636,
+              "clicks": 141,
+              "conversions": 5,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-07",
+              "spend": 63321,
+              "revenue": 308788,
+              "impressions": 17823,
+              "clicks": 162,
+              "conversions": 5,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-08",
+              "spend": 53174,
+              "revenue": 345774,
+              "impressions": 20193,
+              "clicks": 148,
+              "conversions": 5,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-09",
+              "spend": 47060,
+              "revenue": 290309,
+              "impressions": 18471,
+              "clicks": 155,
+              "conversions": 5,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-10",
+              "spend": 58665,
+              "revenue": 301276,
+              "impressions": 16548,
+              "clicks": 155,
+              "conversions": 5,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-11",
+              "spend": 60007,
+              "revenue": 250572,
+              "impressions": 17743,
+              "clicks": 135,
+              "conversions": 5,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-12",
+              "spend": 53826,
+              "revenue": 284252,
+              "impressions": 17188,
+              "clicks": 148,
+              "conversions": 5,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-13",
+              "spend": 55336,
+              "revenue": 334215,
+              "impressions": 20364,
+              "clicks": 171,
+              "conversions": 5,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-14",
+              "spend": 50172,
+              "revenue": 307898,
+              "impressions": 20690,
+              "clicks": 162,
+              "conversions": 5,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-15",
+              "spend": 62762,
+              "revenue": 346043,
+              "impressions": 19905,
+              "clicks": 178,
+              "conversions": 7,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-16",
+              "spend": 61345,
+              "revenue": 367482,
+              "impressions": 18641,
+              "clicks": 153,
+              "conversions": 5,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-17",
+              "spend": 63207,
+              "revenue": 320110,
+              "impressions": 18857,
+              "clicks": 162,
+              "conversions": 5,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-18",
+              "spend": 50524,
+              "revenue": 322283,
+              "impressions": 19500,
+              "clicks": 162,
+              "conversions": 5,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-19",
+              "spend": 55259,
+              "revenue": 302682,
+              "impressions": 18160,
+              "clicks": 157,
+              "conversions": 7,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-20",
+              "spend": 61917,
+              "revenue": 331440,
+              "impressions": 20672,
+              "clicks": 171,
+              "conversions": 7,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-21",
+              "spend": 70269,
+              "revenue": 319386,
+              "impressions": 23279,
+              "clicks": 169,
+              "conversions": 5,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-22",
+              "spend": 62630,
+              "revenue": 338261,
+              "impressions": 21551,
+              "clicks": 178,
+              "conversions": 7,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-23",
+              "spend": 61759,
+              "revenue": 382479,
+              "impressions": 22324,
+              "clicks": 193,
+              "conversions": 5,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-24",
+              "spend": 52417,
+              "revenue": 299164,
+              "impressions": 22239,
+              "clicks": 186,
+              "conversions": 7,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-25",
+              "spend": 62917,
+              "revenue": 341067,
+              "impressions": 19712,
+              "clicks": 170,
+              "conversions": 5,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-26",
+              "spend": 72069,
+              "revenue": 316464,
+              "impressions": 21800,
+              "clicks": 162,
+              "conversions": 5,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-27",
+              "spend": 61888,
+              "revenue": 369912,
+              "impressions": 21869,
+              "clicks": 186,
+              "conversions": 5,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-28",
+              "spend": 59612,
+              "revenue": 426798,
+              "impressions": 23697,
+              "clicks": 210,
+              "conversions": 7,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-29",
+              "spend": 57862,
+              "revenue": 376383,
+              "impressions": 22664,
+              "clicks": 192,
+              "conversions": 7,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-30",
+              "spend": 69652,
+              "revenue": 401716,
+              "impressions": 22452,
+              "clicks": 198,
+              "conversions": 7,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-31",
+              "spend": 61577,
+              "revenue": 330517,
+              "impressions": 23674,
+              "clicks": 169,
+              "conversions": 7,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-08-01",
+              "spend": 62546,
+              "revenue": 356069,
+              "impressions": 20212,
+              "clicks": 178,
+              "conversions": 5,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-08-02",
+              "spend": 54638,
+              "revenue": 398593,
+              "impressions": 22929,
+              "clicks": 195,
+              "conversions": 7,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-08-03",
+              "spend": 67824,
+              "revenue": 356202,
+              "impressions": 25026,
+              "clicks": 184,
+              "conversions": 7,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-08-04",
+              "spend": 69093,
+              "revenue": 412697,
+              "impressions": 24866,
+              "clicks": 208,
+              "conversions": 7,
+              "new_customers": 3
+            }
+          ]
+        },
+        {
+          "utm_campaign": "ASC_뷰티세럼",
+          "ltv": 178000,
+          "daily": [
+            {
+              "date": "2026-07-06",
+              "spend": 105520,
+              "revenue": 420426,
+              "impressions": 27640,
+              "clicks": 222,
+              "conversions": 7,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-07",
+              "spend": 92462,
+              "revenue": 414979,
+              "impressions": 31569,
+              "clicks": 266,
+              "conversions": 7,
+              "new_customers": 4
+            },
+            {
+              "date": "2026-07-08",
+              "spend": 80972,
+              "revenue": 440255,
+              "impressions": 29312,
+              "clicks": 255,
+              "conversions": 7,
+              "new_customers": 4
+            },
+            {
+              "date": "2026-07-09",
+              "spend": 83895,
+              "revenue": 390578,
+              "impressions": 30309,
+              "clicks": 231,
+              "conversions": 7,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-10",
+              "spend": 90620,
+              "revenue": 378446,
+              "impressions": 30444,
+              "clicks": 245,
+              "conversions": 7,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-11",
+              "spend": 107640,
+              "revenue": 333274,
+              "impressions": 26773,
+              "clicks": 222,
+              "conversions": 7,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-12",
+              "spend": 101814,
+              "revenue": 356024,
+              "impressions": 29298,
+              "clicks": 212,
+              "conversions": 7,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-13",
+              "spend": 81009,
+              "revenue": 443900,
+              "impressions": 28464,
+              "clicks": 257,
+              "conversions": 7,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-14",
+              "spend": 93516,
+              "revenue": 484450,
+              "impressions": 30366,
+              "clicks": 256,
+              "conversions": 7,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-15",
+              "spend": 91527,
+              "revenue": 454624,
+              "impressions": 33121,
+              "clicks": 292,
+              "conversions": 8,
+              "new_customers": 4
+            },
+            {
+              "date": "2026-07-16",
+              "spend": 96309,
+              "revenue": 474373,
+              "impressions": 30820,
+              "clicks": 262,
+              "conversions": 7,
+              "new_customers": 4
+            },
+            {
+              "date": "2026-07-17",
+              "spend": 104521,
+              "revenue": 388777,
+              "impressions": 32338,
+              "clicks": 265,
+              "conversions": 7,
+              "new_customers": 4
+            },
+            {
+              "date": "2026-07-18",
+              "spend": 87771,
+              "revenue": 364846,
+              "impressions": 32193,
+              "clicks": 231,
+              "conversions": 7,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-19",
+              "spend": 100136,
+              "revenue": 413083,
+              "impressions": 31203,
+              "clicks": 255,
+              "conversions": 7,
+              "new_customers": 4
+            },
+            {
+              "date": "2026-07-20",
+              "spend": 104519,
+              "revenue": 426655,
+              "impressions": 33885,
+              "clicks": 289,
+              "conversions": 7,
+              "new_customers": 4
+            },
+            {
+              "date": "2026-07-21",
+              "spend": 101995,
+              "revenue": 496219,
+              "impressions": 33828,
+              "clicks": 276,
+              "conversions": 7,
+              "new_customers": 4
+            },
+            {
+              "date": "2026-07-22",
+              "spend": 109419,
+              "revenue": 489645,
+              "impressions": 35331,
+              "clicks": 300,
+              "conversions": 9,
+              "new_customers": 4
+            },
+            {
+              "date": "2026-07-23",
+              "spend": 93188,
+              "revenue": 520133,
+              "impressions": 37933,
+              "clicks": 262,
+              "conversions": 8,
+              "new_customers": 4
+            },
+            {
+              "date": "2026-07-24",
+              "spend": 89504,
+              "revenue": 491214,
+              "impressions": 31322,
+              "clicks": 266,
+              "conversions": 7,
+              "new_customers": 4
+            },
+            {
+              "date": "2026-07-25",
+              "spend": 112393,
+              "revenue": 414627,
+              "impressions": 33819,
+              "clicks": 278,
+              "conversions": 8,
+              "new_customers": 4
+            },
+            {
+              "date": "2026-07-26",
+              "spend": 121459,
+              "revenue": 447822,
+              "impressions": 35762,
+              "clicks": 259,
+              "conversions": 7,
+              "new_customers": 4
+            },
+            {
+              "date": "2026-07-27",
+              "spend": 99410,
+              "revenue": 433184,
+              "impressions": 34519,
+              "clicks": 308,
+              "conversions": 8,
+              "new_customers": 4
+            },
+            {
+              "date": "2026-07-28",
+              "spend": 90302,
+              "revenue": 533793,
+              "impressions": 38879,
+              "clicks": 279,
+              "conversions": 8,
+              "new_customers": 5
+            },
+            {
+              "date": "2026-07-29",
+              "spend": 102458,
+              "revenue": 496103,
+              "impressions": 35724,
+              "clicks": 319,
+              "conversions": 9,
+              "new_customers": 4
+            },
+            {
+              "date": "2026-07-30",
+              "spend": 110758,
+              "revenue": 558114,
+              "impressions": 37133,
+              "clicks": 319,
+              "conversions": 9,
+              "new_customers": 5
+            },
+            {
+              "date": "2026-07-31",
+              "spend": 121328,
+              "revenue": 490345,
+              "impressions": 37736,
+              "clicks": 285,
+              "conversions": 9,
+              "new_customers": 4
+            },
+            {
+              "date": "2026-08-01",
+              "spend": 109279,
+              "revenue": 437154,
+              "impressions": 33446,
+              "clicks": 286,
+              "conversions": 8,
+              "new_customers": 4
+            },
+            {
+              "date": "2026-08-02",
+              "spend": 91029,
+              "revenue": 519882,
+              "impressions": 36517,
+              "clicks": 274,
+              "conversions": 7,
+              "new_customers": 5
+            },
+            {
+              "date": "2026-08-03",
+              "spend": 114310,
+              "revenue": 504481,
+              "impressions": 41050,
+              "clicks": 293,
+              "conversions": 9,
+              "new_customers": 5
+            },
+            {
+              "date": "2026-08-04",
+              "spend": 110938,
+              "revenue": 482593,
+              "impressions": 39260,
+              "clicks": 345,
+              "conversions": 9,
+              "new_customers": 4
+            }
+          ]
+        },
+        {
+          "utm_campaign": "신규_관심사_립틴트",
+          "ltv": 162000,
+          "daily": [
+            {
+              "date": "2026-07-06",
+              "spend": 80191,
+              "revenue": 270047,
+              "impressions": 22329,
+              "clicks": 191,
+              "conversions": 4,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-07",
+              "spend": 89822,
+              "revenue": 250629,
+              "impressions": 22547,
+              "clicks": 183,
+              "conversions": 4,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-08",
+              "spend": 83271,
+              "revenue": 247882,
+              "impressions": 23707,
+              "clicks": 219,
+              "conversions": 5,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-09",
+              "spend": 74157,
+              "revenue": 264999,
+              "impressions": 25376,
+              "clicks": 191,
+              "conversions": 5,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-10",
+              "spend": 83943,
+              "revenue": 245121,
+              "impressions": 20757,
+              "clicks": 178,
+              "conversions": 4,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-11",
+              "spend": 85795,
+              "revenue": 260134,
+              "impressions": 22303,
+              "clicks": 185,
+              "conversions": 5,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-12",
+              "spend": 85861,
+              "revenue": 259055,
+              "impressions": 23466,
+              "clicks": 186,
+              "conversions": 4,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-13",
+              "spend": 71779,
+              "revenue": 238504,
+              "impressions": 23769,
+              "clicks": 214,
+              "conversions": 5,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-14",
+              "spend": 70981,
+              "revenue": 311079,
+              "impressions": 25799,
+              "clicks": 224,
+              "conversions": 5,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-15",
+              "spend": 89015,
+              "revenue": 274282,
+              "impressions": 24778,
+              "clicks": 205,
+              "conversions": 5,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-16",
+              "spend": 89521,
+              "revenue": 295622,
+              "impressions": 25635,
+              "clicks": 203,
+              "conversions": 5,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-17",
+              "spend": 92176,
+              "revenue": 255605,
+              "impressions": 25822,
+              "clicks": 215,
+              "conversions": 5,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-18",
+              "spend": 81298,
+              "revenue": 288505,
+              "impressions": 24607,
+              "clicks": 196,
+              "conversions": 5,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-19",
+              "spend": 72238,
+              "revenue": 271653,
+              "impressions": 22877,
+              "clicks": 188,
+              "conversions": 5,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-20",
+              "spend": 96441,
+              "revenue": 267188,
+              "impressions": 28065,
+              "clicks": 227,
+              "conversions": 5,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-21",
+              "spend": 90136,
+              "revenue": 329981,
+              "impressions": 27052,
+              "clicks": 226,
+              "conversions": 5,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-22",
+              "spend": 82890,
+              "revenue": 307569,
+              "impressions": 26943,
+              "clicks": 214,
+              "conversions": 5,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-23",
+              "spend": 82262,
+              "revenue": 345757,
+              "impressions": 27952,
+              "clicks": 234,
+              "conversions": 5,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-24",
+              "spend": 81520,
+              "revenue": 306309,
+              "impressions": 26469,
+              "clicks": 207,
+              "conversions": 5,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-25",
+              "spend": 97312,
+              "revenue": 272615,
+              "impressions": 27404,
+              "clicks": 224,
+              "conversions": 5,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-26",
+              "spend": 98008,
+              "revenue": 292802,
+              "impressions": 27750,
+              "clicks": 226,
+              "conversions": 5,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-27",
+              "spend": 83758,
+              "revenue": 340464,
+              "impressions": 27824,
+              "clicks": 214,
+              "conversions": 5,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-28",
+              "spend": 88830,
+              "revenue": 349200,
+              "impressions": 27655,
+              "clicks": 264,
+              "conversions": 5,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-29",
+              "spend": 86429,
+              "revenue": 304898,
+              "impressions": 31138,
+              "clicks": 241,
+              "conversions": 5,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-30",
+              "spend": 88767,
+              "revenue": 369093,
+              "impressions": 28560,
+              "clicks": 231,
+              "conversions": 5,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-31",
+              "spend": 102478,
+              "revenue": 306254,
+              "impressions": 30138,
+              "clicks": 237,
+              "conversions": 5,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-08-01",
+              "spend": 87894,
+              "revenue": 289185,
+              "impressions": 27814,
+              "clicks": 226,
+              "conversions": 5,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-08-02",
+              "spend": 93890,
+              "revenue": 325684,
+              "impressions": 26798,
+              "clicks": 248,
+              "conversions": 5,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-08-03",
+              "spend": 93952,
+              "revenue": 329810,
+              "impressions": 31393,
+              "clicks": 259,
+              "conversions": 7,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-08-04",
+              "spend": 95389,
+              "revenue": 380074,
+              "impressions": 31152,
+              "clicks": 243,
+              "conversions": 7,
+              "new_customers": 3
+            }
+          ]
+        },
+        {
+          "utm_campaign": "카탈로그_전상품",
+          "ltv": 150000,
+          "daily": [
+            {
+              "date": "2026-07-06",
+              "spend": 64491,
+              "revenue": 202615,
+              "impressions": 17584,
+              "clicks": 136,
+              "conversions": 3,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-07",
+              "spend": 69021,
+              "revenue": 199936,
+              "impressions": 20034,
+              "clicks": 136,
+              "conversions": 3,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-08",
+              "spend": 66970,
+              "revenue": 186900,
+              "impressions": 20130,
+              "clicks": 143,
+              "conversions": 3,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-09",
+              "spend": 56859,
+              "revenue": 210400,
+              "impressions": 17712,
+              "clicks": 129,
+              "conversions": 3,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-10",
+              "spend": 66892,
+              "revenue": 182314,
+              "impressions": 16501,
+              "clicks": 126,
+              "conversions": 3,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-11",
+              "spend": 64945,
+              "revenue": 160497,
+              "impressions": 17043,
+              "clicks": 136,
+              "conversions": 3,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-12",
+              "spend": 68391,
+              "revenue": 192509,
+              "impressions": 17138,
+              "clicks": 143,
+              "conversions": 3,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-13",
+              "spend": 66627,
+              "revenue": 188997,
+              "impressions": 19584,
+              "clicks": 145,
+              "conversions": 3,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-14",
+              "spend": 58255,
+              "revenue": 233462,
+              "impressions": 20318,
+              "clicks": 159,
+              "conversions": 3,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-15",
+              "spend": 69670,
+              "revenue": 219029,
+              "impressions": 22039,
+              "clicks": 153,
+              "conversions": 3,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-16",
+              "spend": 75110,
+              "revenue": 206138,
+              "impressions": 18704,
+              "clicks": 157,
+              "conversions": 3,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-17",
+              "spend": 66407,
+              "revenue": 213947,
+              "impressions": 19634,
+              "clicks": 133,
+              "conversions": 3,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-18",
+              "spend": 62021,
+              "revenue": 179446,
+              "impressions": 17996,
+              "clicks": 150,
+              "conversions": 3,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-19",
+              "spend": 70621,
+              "revenue": 202850,
+              "impressions": 20391,
+              "clicks": 138,
+              "conversions": 3,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-20",
+              "spend": 66289,
+              "revenue": 234116,
+              "impressions": 20727,
+              "clicks": 145,
+              "conversions": 3,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-21",
+              "spend": 79280,
+              "revenue": 214843,
+              "impressions": 20697,
+              "clicks": 164,
+              "conversions": 3,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-22",
+              "spend": 77191,
+              "revenue": 240364,
+              "impressions": 23294,
+              "clicks": 164,
+              "conversions": 3,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-23",
+              "spend": 65816,
+              "revenue": 200688,
+              "impressions": 21397,
+              "clicks": 171,
+              "conversions": 3,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-24",
+              "spend": 69724,
+              "revenue": 208733,
+              "impressions": 19323,
+              "clicks": 159,
+              "conversions": 3,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-25",
+              "spend": 71470,
+              "revenue": 222981,
+              "impressions": 20839,
+              "clicks": 165,
+              "conversions": 3,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-26",
+              "spend": 82788,
+              "revenue": 201624,
+              "impressions": 21991,
+              "clicks": 164,
+              "conversions": 3,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-27",
+              "spend": 67591,
+              "revenue": 248845,
+              "impressions": 21245,
+              "clicks": 164,
+              "conversions": 3,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-28",
+              "spend": 68439,
+              "revenue": 271955,
+              "impressions": 21974,
+              "clicks": 162,
+              "conversions": 4,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-29",
+              "spend": 77162,
+              "revenue": 253979,
+              "impressions": 23791,
+              "clicks": 184,
+              "conversions": 3,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-30",
+              "spend": 74604,
+              "revenue": 255964,
+              "impressions": 22850,
+              "clicks": 167,
+              "conversions": 3,
+              "new_customers": 3
+            },
+            {
+              "date": "2026-07-31",
+              "spend": 81908,
+              "revenue": 223800,
+              "impressions": 23208,
+              "clicks": 179,
+              "conversions": 3,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-08-01",
+              "spend": 66717,
+              "revenue": 226870,
+              "impressions": 22226,
+              "clicks": 164,
+              "conversions": 3,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-08-02",
+              "spend": 68443,
+              "revenue": 211462,
+              "impressions": 20614,
+              "clicks": 157,
+              "conversions": 3,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-08-03",
+              "spend": 79326,
+              "revenue": 226941,
+              "impressions": 24881,
+              "clicks": 188,
+              "conversions": 4,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-08-04",
+              "spend": 76974,
+              "revenue": 277791,
+              "impressions": 23782,
+              "clicks": 186,
+              "conversions": 4,
+              "new_customers": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "kakao",
+      "name": "Kakao",
+      "badge": "K",
+      "cls": "b-k",
+      "source": "kakao",
+      "color": "#FEE500",
+      "campaigns": [
+        {
+          "utm_campaign": "카카오모먼트_홈웨어",
+          "ltv": 162000,
+          "daily": [
+            {
+              "date": "2026-07-06",
+              "spend": 51920,
+              "revenue": 158529,
+              "impressions": 12339,
+              "clicks": 88,
+              "conversions": 2,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-07",
+              "spend": 47757,
+              "revenue": 146167,
+              "impressions": 12448,
+              "clicks": 101,
+              "conversions": 2,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-08",
+              "spend": 44362,
+              "revenue": 184521,
+              "impressions": 13093,
+              "clicks": 102,
+              "conversions": 2,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-09",
+              "spend": 39288,
+              "revenue": 154974,
+              "impressions": 14034,
+              "clicks": 88,
+              "conversions": 2,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-10",
+              "spend": 44129,
+              "revenue": 141423,
+              "impressions": 13574,
+              "clicks": 81,
+              "conversions": 2,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-11",
+              "spend": 54876,
+              "revenue": 150853,
+              "impressions": 12421,
+              "clicks": 84,
+              "conversions": 2,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-12",
+              "spend": 44948,
+              "revenue": 149957,
+              "impressions": 13071,
+              "clicks": 84,
+              "conversions": 2,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-13",
+              "spend": 46159,
+              "revenue": 176455,
+              "impressions": 13235,
+              "clicks": 98,
+              "conversions": 2,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-14",
+              "spend": 46845,
+              "revenue": 182536,
+              "impressions": 14478,
+              "clicks": 103,
+              "conversions": 3,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-15",
+              "spend": 48218,
+              "revenue": 159865,
+              "impressions": 13907,
+              "clicks": 112,
+              "conversions": 3,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-16",
+              "spend": 53958,
+              "revenue": 163998,
+              "impressions": 13795,
+              "clicks": 95,
+              "conversions": 2,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-17",
+              "spend": 45364,
+              "revenue": 180476,
+              "impressions": 13928,
+              "clicks": 100,
+              "conversions": 2,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-18",
+              "spend": 48888,
+              "revenue": 160910,
+              "impressions": 13261,
+              "clicks": 91,
+              "conversions": 3,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-19",
+              "spend": 43726,
+              "revenue": 150170,
+              "impressions": 14474,
+              "clicks": 105,
+              "conversions": 2,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-20",
+              "spend": 47179,
+              "revenue": 187224,
+              "impressions": 15259,
+              "clicks": 105,
+              "conversions": 3,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-21",
+              "spend": 53867,
+              "revenue": 181473,
+              "impressions": 14662,
+              "clicks": 104,
+              "conversions": 3,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-22",
+              "spend": 49602,
+              "revenue": 213902,
+              "impressions": 17136,
+              "clicks": 119,
+              "conversions": 3,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-23",
+              "spend": 49064,
+              "revenue": 191234,
+              "impressions": 15169,
+              "clicks": 108,
+              "conversions": 3,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-24",
+              "spend": 49160,
+              "revenue": 165964,
+              "impressions": 14248,
+              "clicks": 98,
+              "conversions": 2,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-25",
+              "spend": 58467,
+              "revenue": 188117,
+              "impressions": 14785,
+              "clicks": 107,
+              "conversions": 3,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-26",
+              "spend": 58986,
+              "revenue": 196859,
+              "impressions": 15665,
+              "clicks": 113,
+              "conversions": 3,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-27",
+              "spend": 50612,
+              "revenue": 181006,
+              "impressions": 15716,
+              "clicks": 108,
+              "conversions": 3,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-28",
+              "spend": 43726,
+              "revenue": 184739,
+              "impressions": 15628,
+              "clicks": 112,
+              "conversions": 3,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-29",
+              "spend": 52091,
+              "revenue": 206881,
+              "impressions": 17581,
+              "clicks": 121,
+              "conversions": 3,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-30",
+              "spend": 53164,
+              "revenue": 194803,
+              "impressions": 16262,
+              "clicks": 115,
+              "conversions": 3,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-07-31",
+              "spend": 61052,
+              "revenue": 204115,
+              "impressions": 14597,
+              "clicks": 119,
+              "conversions": 3,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-08-01",
+              "spend": 52526,
+              "revenue": 193326,
+              "impressions": 15827,
+              "clicks": 112,
+              "conversions": 3,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-08-02",
+              "spend": 45940,
+              "revenue": 216065,
+              "impressions": 15264,
+              "clicks": 103,
+              "conversions": 3,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-08-03",
+              "spend": 56519,
+              "revenue": 226719,
+              "impressions": 17723,
+              "clicks": 128,
+              "conversions": 3,
+              "new_customers": 2
+            },
+            {
+              "date": "2026-08-04",
+              "spend": 57609,
+              "revenue": 206738,
+              "impressions": 17596,
+              "clicks": 121,
+              "conversions": 3,
+              "new_customers": 2
+            }
+          ]
+        },
+        {
+          "utm_campaign": "채널_리타겟",
+          "ltv": 150000,
+          "daily": [
+            {
+              "date": "2026-07-06",
+              "spend": 27500,
+              "revenue": 77824,
+              "impressions": 6562,
+              "clicks": 47,
+              "conversions": 1,
+              "new_customers": 0
+            },
+            {
+              "date": "2026-07-07",
+              "spend": 24052,
+              "revenue": 76441,
+              "impressions": 6405,
+              "clicks": 47,
+              "conversions": 1,
+              "new_customers": 0
+            },
+            {
+              "date": "2026-07-08",
+              "spend": 23486,
+              "revenue": 90516,
+              "impressions": 6421,
+              "clicks": 50,
+              "conversions": 1,
+              "new_customers": 0
+            },
+            {
+              "date": "2026-07-09",
+              "spend": 24169,
+              "revenue": 80683,
+              "impressions": 6633,
+              "clicks": 45,
+              "conversions": 1,
+              "new_customers": 0
+            },
+            {
+              "date": "2026-07-10",
+              "spend": 23584,
+              "revenue": 70426,
+              "impressions": 6138,
+              "clicks": 43,
+              "conversions": 1,
+              "new_customers": 0
+            },
+            {
+              "date": "2026-07-11",
+              "spend": 28045,
+              "revenue": 79055,
+              "impressions": 6319,
+              "clicks": 48,
+              "conversions": 1,
+              "new_customers": 0
+            },
+            {
+              "date": "2026-07-12",
+              "spend": 24022,
+              "revenue": 74550,
+              "impressions": 6362,
+              "clicks": 42,
+              "conversions": 1,
+              "new_customers": 0
+            },
+            {
+              "date": "2026-07-13",
+              "spend": 23541,
+              "revenue": 72888,
+              "impressions": 6186,
+              "clicks": 50,
+              "conversions": 1,
+              "new_customers": 0
+            },
+            {
+              "date": "2026-07-14",
+              "spend": 24814,
+              "revenue": 91595,
+              "impressions": 7586,
+              "clicks": 55,
+              "conversions": 1,
+              "new_customers": 0
+            },
+            {
+              "date": "2026-07-15",
+              "spend": 24300,
+              "revenue": 85703,
+              "impressions": 7040,
+              "clicks": 52,
+              "conversions": 2,
+              "new_customers": 0
+            },
+            {
+              "date": "2026-07-16",
+              "spend": 30738,
+              "revenue": 83840,
+              "impressions": 6543,
+              "clicks": 53,
+              "conversions": 1,
+              "new_customers": 0
+            },
+            {
+              "date": "2026-07-17",
+              "spend": 27331,
+              "revenue": 86965,
+              "impressions": 6557,
+              "clicks": 53,
+              "conversions": 2,
+              "new_customers": 0
+            },
+            {
+              "date": "2026-07-18",
+              "spend": 25469,
+              "revenue": 73014,
+              "impressions": 7034,
+              "clicks": 50,
+              "conversions": 1,
+              "new_customers": 0
+            },
+            {
+              "date": "2026-07-19",
+              "spend": 23869,
+              "revenue": 82483,
+              "impressions": 6824,
+              "clicks": 47,
+              "conversions": 1,
+              "new_customers": 0
+            },
+            {
+              "date": "2026-07-20",
+              "spend": 27064,
+              "revenue": 96148,
+              "impressions": 6860,
+              "clicks": 49,
+              "conversions": 2,
+              "new_customers": 0
+            },
+            {
+              "date": "2026-07-21",
+              "spend": 26367,
+              "revenue": 88461,
+              "impressions": 8043,
+              "clicks": 55,
+              "conversions": 2,
+              "new_customers": 0
+            },
+            {
+              "date": "2026-07-22",
+              "spend": 25769,
+              "revenue": 98803,
+              "impressions": 7729,
+              "clicks": 55,
+              "conversions": 2,
+              "new_customers": 0
+            },
+            {
+              "date": "2026-07-23",
+              "spend": 26731,
+              "revenue": 82734,
+              "impressions": 7071,
+              "clicks": 58,
+              "conversions": 2,
+              "new_customers": 0
+            },
+            {
+              "date": "2026-07-24",
+              "spend": 23374,
+              "revenue": 84902,
+              "impressions": 7464,
+              "clicks": 53,
+              "conversions": 1,
+              "new_customers": 0
+            },
+            {
+              "date": "2026-07-25",
+              "spend": 29393,
+              "revenue": 90643,
+              "impressions": 6854,
+              "clicks": 55,
+              "conversions": 2,
+              "new_customers": 0
+            },
+            {
+              "date": "2026-07-26",
+              "spend": 32416,
+              "revenue": 82031,
+              "impressions": 7136,
+              "clicks": 58,
+              "conversions": 2,
+              "new_customers": 0
+            },
+            {
+              "date": "2026-07-27",
+              "spend": 26566,
+              "revenue": 101143,
+              "impressions": 8067,
+              "clicks": 58,
+              "conversions": 2,
+              "new_customers": 0
+            },
+            {
+              "date": "2026-07-28",
+              "spend": 26834,
+              "revenue": 86874,
+              "impressions": 8358,
+              "clicks": 57,
+              "conversions": 2,
+              "new_customers": 0
+            },
+            {
+              "date": "2026-07-29",
+              "spend": 24800,
+              "revenue": 103265,
+              "impressions": 7678,
+              "clicks": 65,
+              "conversions": 2,
+              "new_customers": 0
+            },
+            {
+              "date": "2026-07-30",
+              "spend": 29588,
+              "revenue": 102926,
+              "impressions": 8600,
+              "clicks": 60,
+              "conversions": 2,
+              "new_customers": 0
+            },
+            {
+              "date": "2026-07-31",
+              "spend": 32388,
+              "revenue": 89953,
+              "impressions": 7462,
+              "clicks": 53,
+              "conversions": 2,
+              "new_customers": 0
+            },
+            {
+              "date": "2026-08-01",
+              "spend": 26517,
+              "revenue": 91202,
+              "impressions": 7131,
+              "clicks": 59,
+              "conversions": 2,
+              "new_customers": 0
+            },
+            {
+              "date": "2026-08-02",
+              "spend": 27113,
+              "revenue": 84967,
+              "impressions": 7790,
+              "clicks": 57,
+              "conversions": 2,
+              "new_customers": 0
+            },
+            {
+              "date": "2026-08-03",
+              "spend": 30511,
+              "revenue": 94633,
+              "impressions": 8195,
+              "clicks": 56,
+              "conversions": 2,
+              "new_customers": 1
+            },
+            {
+              "date": "2026-08-04",
+              "spend": 29650,
+              "revenue": 115334,
+              "impressions": 9169,
+              "clicks": 66,
+              "conversions": 2,
+              "new_customers": 0
+            }
+          ]
+        },
+        {
+          "utm_campaign": "비즈보드_메인",
+          "ltv": 144000,
+          "daily": [
+            {
+              "date": "2026-07-06",
+              "spend": 33208,
+              "revenue": 96891,
+              "impressions": 7895,
+              "clicks": 53,
+              "conversions": 1,
+              "new_customers": 0
+            },
+            {
+              "date": "2026-07-07",
+              "spend": 37276,
+              "revenue": 89274,
+              "impressions": 7969,
+              "clicks": 61,
+              "conversions": 1,
+              "new_customers": 0
+            },
+            {
+              "date": "2026-07-08",
+              "spend": 31219,
+              "revenue": 101051,
+              "impressions": 9045,
+              "clicks": 67,
+              "conversions": 2,
+              "new_customers": 0
+            },
+            {
+              "date": "2026-07-09",
+              "spend": 33667,
+              "revenue": 107238,
+              "impressions": 8266,
+              "clicks": 59,
+              "conversions": 2,
+              "new_customers": 0
+            },
+            {
+              "date": "2026-07-10",
+              "spend": 34826,
+              "revenue": 86386,
+              "impressions": 8619,
+              "clicks": 59,
+              "conversions": 1,
+              "new_customers": 0
+            },
+            {
+              "date": "2026-07-11",
+              "spend": 35548,
+              "revenue": 92186,
+              "impressions": 7886,
+              "clicks": 62,
+              "conversions": 1,
+              "new_customers": 0
+            },
+            {
+              "date": "2026-07-12",
+              "spend": 39034,
+              "revenue": 103492,
+              "impressions": 7628,
+              "clicks": 57,
+              "conversions": 2,
+              "new_customers": 0
+            },
+            {
+              "date": "2026-07-13",
+              "spend": 32826,
+              "revenue": 96259,
+              "impressions": 9059,
+              "clicks": 65,
+              "conversions": 2,
+              "new_customers": 1
+            },
+            {
+              "date": "2026-07-14",
+              "spend": 29388,
+              "revenue": 114059,
+              "impressions": 9263,
+              "clicks": 62,
+              "conversions": 2,
+              "new_customers": 1
+            },
+            {
+              "date": "2026-07-15",
+              "spend": 36936,
+              "revenue": 100191,
+              "impressions": 8902,
+              "clicks": 69,
+              "conversions": 2,
+              "new_customers": 1
+            },
+            {
+              "date": "2026-07-16",
+              "spend": 35277,
+              "revenue": 120819,
+              "impressions": 8612,
+              "clicks": 62,
+              "conversions": 2,
+              "new_customers": 0
+            },
+            {
+              "date": "2026-07-17",
+              "spend": 36508,
+              "revenue": 105300,
+              "impressions": 8704,
+              "clicks": 66,
+              "conversions": 2,
+              "new_customers": 1
+            },
+            {
+              "date": "2026-07-18",
+              "spend": 35639,
+              "revenue": 105993,
+              "impressions": 8995,
+              "clicks": 66,
+              "conversions": 1,
+              "new_customers": 0
+            },
+            {
+              "date": "2026-07-19",
+              "spend": 31832,
+              "revenue": 99605,
+              "impressions": 8386,
+              "clicks": 64,
+              "conversions": 2,
+              "new_customers": 0
+            },
+            {
+              "date": "2026-07-20",
+              "spend": 38262,
+              "revenue": 110317,
+              "impressions": 9467,
+              "clicks": 69,
+              "conversions": 2,
+              "new_customers": 1
+            },
+            {
+              "date": "2026-07-21",
+              "spend": 43384,
+              "revenue": 106502,
+              "impressions": 10659,
+              "clicks": 69,
+              "conversions": 2,
+              "new_customers": 1
+            },
+            {
+              "date": "2026-07-22",
+              "spend": 36478,
+              "revenue": 112714,
+              "impressions": 9872,
+              "clicks": 71,
+              "conversions": 2,
+              "new_customers": 1
+            },
+            {
+              "date": "2026-07-23",
+              "spend": 36088,
+              "revenue": 127109,
+              "impressions": 10223,
+              "clicks": 78,
+              "conversions": 2,
+              "new_customers": 1
+            },
+            {
+              "date": "2026-07-24",
+              "spend": 32783,
+              "revenue": 98510,
+              "impressions": 8897,
+              "clicks": 64,
+              "conversions": 2,
+              "new_customers": 1
+            },
+            {
+              "date": "2026-07-25",
+              "spend": 39273,
+              "revenue": 112186,
+              "impressions": 9241,
+              "clicks": 70,
+              "conversions": 2,
+              "new_customers": 1
+            },
+            {
+              "date": "2026-07-26",
+              "spend": 36966,
+              "revenue": 102462,
+              "impressions": 10054,
+              "clicks": 67,
+              "conversions": 2,
+              "new_customers": 0
+            },
+            {
+              "date": "2026-07-27",
+              "spend": 38857,
+              "revenue": 119867,
+              "impressions": 10093,
+              "clicks": 76,
+              "conversions": 2,
+              "new_customers": 1
+            },
+            {
+              "date": "2026-07-28",
+              "spend": 37397,
+              "revenue": 138397,
+              "impressions": 10934,
+              "clicks": 72,
+              "conversions": 2,
+              "new_customers": 1
+            },
+            {
+              "date": "2026-07-29",
+              "spend": 36381,
+              "revenue": 121903,
+              "impressions": 10466,
+              "clicks": 79,
+              "conversions": 2,
+              "new_customers": 1
+            },
+            {
+              "date": "2026-07-30",
+              "spend": 40864,
+              "revenue": 128781,
+              "impressions": 10446,
+              "clicks": 82,
+              "conversions": 2,
+              "new_customers": 1
+            },
+            {
+              "date": "2026-07-31",
+              "spend": 38379,
+              "revenue": 105620,
+              "impressions": 9384,
+              "clicks": 70,
+              "conversions": 2,
+              "new_customers": 1
+            },
+            {
+              "date": "2026-08-01",
+              "spend": 36626,
+              "revenue": 114021,
+              "impressions": 9412,
+              "clicks": 74,
+              "conversions": 2,
+              "new_customers": 1
+            },
+            {
+              "date": "2026-08-02",
+              "spend": 39179,
+              "revenue": 127857,
+              "impressions": 10655,
+              "clicks": 67,
+              "conversions": 2,
+              "new_customers": 1
+            },
+            {
+              "date": "2026-08-03",
+              "spend": 42505,
+              "revenue": 118224,
+              "impressions": 11540,
+              "clicks": 76,
+              "conversions": 2,
+              "new_customers": 1
+            },
+            {
+              "date": "2026-08-04",
+              "spend": 43392,
+              "revenue": 136786,
+              "impressions": 11476,
+              "clicks": 85,
+              "conversions": 2,
+              "new_customers": 1
+            }
+          ]
+        },
+        {
+          "utm_campaign": "쇼핑_슬리퍼",
+          "ltv": 132000,
+          "daily": [
+            {
+              "date": "2026-07-06",
+              "spend": 21120,
+              "revenue": 55252,
+              "impressions": 4757,
+              "clicks": 33,
+              "conversions": 0,
+              "new_customers": 0
+            },
+            {
+              "date": "2026-07-07",
+              "spend": 22653,
+              "revenue": 54404,
+              "impressions": 5429,
+              "clicks": 40,
+              "conversions": 0,
+              "new_customers": 0
+            },
+            {
+              "date": "2026-07-08",
+              "spend": 19865,
+              "revenue": 57774,
+              "impressions": 5047,
+              "clicks": 38,
+              "conversions": 0,
+              "new_customers": 0
+            },
+            {
+              "date": "2026-07-09",
+              "spend": 20510,
+              "revenue": 51114,
+              "impressions": 5214,
+              "clicks": 41,
+              "conversions": 0,
+              "new_customers": 0
+            },
+            {
+              "date": "2026-07-10",
+              "spend": 21965,
+              "revenue": 50157,
+              "impressions": 5197,
+              "clicks": 36,
+              "conversions": 0,
+              "new_customers": 0
+            },
+            {
+              "date": "2026-07-11",
+              "spend": 26026,
+              "revenue": 44086,
+              "impressions": 4572,
+              "clicks": 33,
+              "conversions": 0,
+              "new_customers": 0
+            },
+            {
+              "date": "2026-07-12",
+              "spend": 24639,
+              "revenue": 47131,
+              "impressions": 5002,
+              "clicks": 38,
+              "conversions": 0,
+              "new_customers": 0
+            },
+            {
+              "date": "2026-07-13",
+              "spend": 19691,
+              "revenue": 58924,
+              "impressions": 4862,
+              "clicks": 38,
+              "conversions": 0,
+              "new_customers": 0
+            },
+            {
+              "date": "2026-07-14",
+              "spend": 19083,
+              "revenue": 65011,
+              "impressions": 5495,
+              "clicks": 38,
+              "conversions": 0,
+              "new_customers": 0
+            },
+            {
+              "date": "2026-07-15",
+              "spend": 22871,
+              "revenue": 60974,
+              "impressions": 5971,
+              "clicks": 45,
+              "conversions": 0,
+              "new_customers": 0
+            },
+            {
+              "date": "2026-07-16",
+              "spend": 24236,
+              "revenue": 53819,
+              "impressions": 5621,
+              "clicks": 43,
+              "conversions": 0,
+              "new_customers": 0
+            },
+            {
+              "date": "2026-07-17",
+              "spend": 21350,
+              "revenue": 56192,
+              "impressions": 5012,
+              "clicks": 36,
+              "conversions": 0,
+              "new_customers": 0
+            },
+            {
+              "date": "2026-07-18",
+              "spend": 22011,
+              "revenue": 52865,
+              "impressions": 5000,
+              "clicks": 38,
+              "conversions": 0,
+              "new_customers": 0
+            },
+            {
+              "date": "2026-07-19",
+              "spend": 20586,
+              "revenue": 59479,
+              "impressions": 5667,
+              "clicks": 41,
+              "conversions": 0,
+              "new_customers": 0
+            },
+            {
+              "date": "2026-07-20",
+              "spend": 25881,
+              "revenue": 62260,
+              "impressions": 5284,
+              "clicks": 40,
+              "conversions": 0,
+              "new_customers": 0
+            },
+            {
+              "date": "2026-07-21",
+              "spend": 25368,
+              "revenue": 56683,
+              "impressions": 6209,
+              "clicks": 45,
+              "conversions": 0,
+              "new_customers": 0
+            },
+            {
+              "date": "2026-07-22",
+              "spend": 22207,
+              "revenue": 71153,
+              "impressions": 6474,
+              "clicks": 41,
+              "conversions": 0,
+              "new_customers": 0
+            },
+            {
+              "date": "2026-07-23",
+              "spend": 23112,
+              "revenue": 59970,
+              "impressions": 5945,
+              "clicks": 43,
+              "conversions": 0,
+              "new_customers": 0
+            },
+            {
+              "date": "2026-07-24",
+              "spend": 22507,
+              "revenue": 55841,
+              "impressions": 5715,
+              "clicks": 43,
+              "conversions": 0,
+              "new_customers": 0
+            },
+            {
+              "date": "2026-07-25",
+              "spend": 22989,
+              "revenue": 59881,
+              "impressions": 5238,
+              "clicks": 38,
+              "conversions": 0,
+              "new_customers": 0
+            },
+            {
+              "date": "2026-07-26",
+              "spend": 24966,
+              "revenue": 63536,
+              "impressions": 5943,
+              "clicks": 43,
+              "conversions": 0,
+              "new_customers": 0
+            },
+            {
+              "date": "2026-07-27",
+              "spend": 24931,
+              "revenue": 61759,
+              "impressions": 5723,
+              "clicks": 42,
+              "conversions": 1,
+              "new_customers": 0
+            },
+            {
+              "date": "2026-07-28",
+              "spend": 22693,
+              "revenue": 75536,
+              "impressions": 6455,
+              "clicks": 46,
+              "conversions": 1,
+              "new_customers": 0
+            },
+            {
+              "date": "2026-07-29",
+              "spend": 25615,
+              "revenue": 70507,
+              "impressions": 6967,
+              "clicks": 52,
+              "conversions": 0,
+              "new_customers": 0
+            },
+            {
+              "date": "2026-07-30",
+              "spend": 27472,
+              "revenue": 63354,
+              "impressions": 6111,
+              "clicks": 43,
+              "conversions": 0,
+              "new_customers": 0
+            },
+            {
+              "date": "2026-07-31",
+              "spend": 24621,
+              "revenue": 70240,
+              "impressions": 6222,
+              "clicks": 46,
+              "conversions": 0,
+              "new_customers": 0
+            },
+            {
+              "date": "2026-08-01",
+              "spend": 27035,
+              "revenue": 62973,
+              "impressions": 6457,
+              "clicks": 46,
+              "conversions": 0,
+              "new_customers": 0
+            },
+            {
+              "date": "2026-08-02",
+              "spend": 22684,
+              "revenue": 58659,
+              "impressions": 6014,
+              "clicks": 45,
+              "conversions": 0,
+              "new_customers": 0
+            },
+            {
+              "date": "2026-08-03",
+              "spend": 23467,
+              "revenue": 71616,
+              "impressions": 6723,
+              "clicks": 48,
+              "conversions": 0,
+              "new_customers": 0
+            },
+            {
+              "date": "2026-08-04",
+              "spend": 27841,
+              "revenue": 68850,
+              "impressions": 6405,
+              "clicks": 48,
+              "conversions": 1,
+              "new_customers": 0
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "organic": [
+    {
+      "utm_source": "(direct)",
+      "color": "#7A82A3",
+      "daily": [
+        {
+          "date": "2026-07-06",
+          "revenue": 876748
+        },
+        {
+          "date": "2026-07-07",
+          "revenue": 1042220
+        },
+        {
+          "date": "2026-07-08",
+          "revenue": 1031499
+        },
+        {
+          "date": "2026-07-09",
+          "revenue": 1100841
+        },
+        {
+          "date": "2026-07-10",
+          "revenue": 1018670
+        },
+        {
+          "date": "2026-07-11",
+          "revenue": 839900
+        },
+        {
+          "date": "2026-07-12",
+          "revenue": 829039
+        },
+        {
+          "date": "2026-07-13",
+          "revenue": 992952
+        },
+        {
+          "date": "2026-07-14",
+          "revenue": 1007179
+        },
+        {
+          "date": "2026-07-15",
+          "revenue": 1140833
+        },
+        {
+          "date": "2026-07-16",
+          "revenue": 945267
+        },
+        {
+          "date": "2026-07-17",
+          "revenue": 1062976
+        },
+        {
+          "date": "2026-07-18",
+          "revenue": 935981
+        },
+        {
+          "date": "2026-07-19",
+          "revenue": 1128544
+        },
+        {
+          "date": "2026-07-20",
+          "revenue": 1111644
+        },
+        {
+          "date": "2026-07-21",
+          "revenue": 1064586
+        },
+        {
+          "date": "2026-07-22",
+          "revenue": 1278263
+        },
+        {
+          "date": "2026-07-23",
+          "revenue": 1130631
+        },
+        {
+          "date": "2026-07-24",
+          "revenue": 982448
+        },
+        {
+          "date": "2026-07-25",
+          "revenue": 1133465
+        },
+        {
+          "date": "2026-07-26",
+          "revenue": 1216432
+        },
+        {
+          "date": "2026-07-27",
+          "revenue": 1104169
+        },
+        {
+          "date": "2026-07-28",
+          "revenue": 1122888
+        },
+        {
+          "date": "2026-07-29",
+          "revenue": 1268876
+        },
+        {
+          "date": "2026-07-30",
+          "revenue": 1206550
+        },
+        {
+          "date": "2026-07-31",
+          "revenue": 1272828
+        },
+        {
+          "date": "2026-08-01",
+          "revenue": 1202656
+        },
+        {
+          "date": "2026-08-02",
+          "revenue": 1352269
+        },
+        {
+          "date": "2026-08-03",
+          "revenue": 1370455
+        },
+        {
+          "date": "2026-08-04",
+          "revenue": 1229194
+        }
+      ]
+    },
+    {
+      "utm_source": "organic",
+      "color": "#5C6488",
+      "daily": [
+        {
+          "date": "2026-07-06",
+          "revenue": 533068
+        },
+        {
+          "date": "2026-07-07",
+          "revenue": 677433
+        },
+        {
+          "date": "2026-07-08",
+          "revenue": 629481
+        },
+        {
+          "date": "2026-07-09",
+          "revenue": 715185
+        },
+        {
+          "date": "2026-07-10",
+          "revenue": 624057
+        },
+        {
+          "date": "2026-07-11",
+          "revenue": 546573
+        },
+        {
+          "date": "2026-07-12",
+          "revenue": 660760
+        },
+        {
+          "date": "2026-07-13",
+          "revenue": 645767
+        },
+        {
+          "date": "2026-07-14",
+          "revenue": 629410
+        },
+        {
+          "date": "2026-07-15",
+          "revenue": 759547
+        },
+        {
+          "date": "2026-07-16",
+          "revenue": 664511
+        },
+        {
+          "date": "2026-07-17",
+          "revenue": 696466
+        },
+        {
+          "date": "2026-07-18",
+          "revenue": 574338
+        },
+        {
+          "date": "2026-07-19",
+          "revenue": 656462
+        },
+        {
+          "date": "2026-07-20",
+          "revenue": 772652
+        },
+        {
+          "date": "2026-07-21",
+          "revenue": 699099
+        },
+        {
+          "date": "2026-07-22",
+          "revenue": 789371
+        },
+        {
+          "date": "2026-07-23",
+          "revenue": 843888
+        },
+        {
+          "date": "2026-07-24",
+          "revenue": 671951
+        },
+        {
+          "date": "2026-07-25",
+          "revenue": 725050
+        },
+        {
+          "date": "2026-07-26",
+          "revenue": 646283
+        },
+        {
+          "date": "2026-07-27",
+          "revenue": 810949
+        },
+        {
+          "date": "2026-07-28",
+          "revenue": 889072
+        },
+        {
+          "date": "2026-07-29",
+          "revenue": 822922
+        },
+        {
+          "date": "2026-07-30",
+          "revenue": 760509
+        },
+        {
+          "date": "2026-07-31",
+          "revenue": 851475
+        },
+        {
+          "date": "2026-08-01",
+          "revenue": 723872
+        },
+        {
+          "date": "2026-08-02",
+          "revenue": 807323
+        },
+        {
+          "date": "2026-08-03",
+          "revenue": 746736
+        },
+        {
+          "date": "2026-08-04",
+          "revenue": 925791
+        }
+      ]
+    },
+    {
+      "utm_source": "referral",
+      "color": "#454B6B",
+      "daily": [
+        {
+          "date": "2026-07-06",
+          "revenue": 233899
+        },
+        {
+          "date": "2026-07-07",
+          "revenue": 215406
+        },
+        {
+          "date": "2026-07-08",
+          "revenue": 243901
+        },
+        {
+          "date": "2026-07-09",
+          "revenue": 200881
+        },
+        {
+          "date": "2026-07-10",
+          "revenue": 211095
+        },
+        {
+          "date": "2026-07-11",
+          "revenue": 225078
+        },
+        {
+          "date": "2026-07-12",
+          "revenue": 197674
+        },
+        {
+          "date": "2026-07-13",
+          "revenue": 235139
+        },
+        {
+          "date": "2026-07-14",
+          "revenue": 269299
+        },
+        {
+          "date": "2026-07-15",
+          "revenue": 235568
+        },
+        {
+          "date": "2026-07-16",
+          "revenue": 249545
+        },
+        {
+          "date": "2026-07-17",
+          "revenue": 214161
+        },
+        {
+          "date": "2026-07-18",
+          "revenue": 216895
+        },
+        {
+          "date": "2026-07-19",
+          "revenue": 200308
+        },
+        {
+          "date": "2026-07-20",
+          "revenue": 220331
+        },
+        {
+          "date": "2026-07-21",
+          "revenue": 275980
+        },
+        {
+          "date": "2026-07-22",
+          "revenue": 291379
+        },
+        {
+          "date": "2026-07-23",
+          "revenue": 258363
+        },
+        {
+          "date": "2026-07-24",
+          "revenue": 252611
+        },
+        {
+          "date": "2026-07-25",
+          "revenue": 222621
+        },
+        {
+          "date": "2026-07-26",
+          "revenue": 256018
+        },
+        {
+          "date": "2026-07-27",
+          "revenue": 230107
+        },
+        {
+          "date": "2026-07-28",
+          "revenue": 271408
+        },
+        {
+          "date": "2026-07-29",
+          "revenue": 304255
+        },
+        {
+          "date": "2026-07-30",
+          "revenue": 252093
+        },
+        {
+          "date": "2026-07-31",
+          "revenue": 267535
+        },
+        {
+          "date": "2026-08-01",
+          "revenue": 287623
+        },
+        {
+          "date": "2026-08-02",
+          "revenue": 252181
+        },
+        {
+          "date": "2026-08-03",
+          "revenue": 295291
+        },
+        {
+          "date": "2026-08-04",
+          "revenue": 263355
+        }
+      ]
+    }
+  ]
+}

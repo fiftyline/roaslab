@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ROAS LAB · 매체별 성과 지표</title>
+<link rel="preconnect" href="https://fastly.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@400;500;600&display=swap">
+<style>
+  :root{
+    --navy:#0A0E27; --navy2:#111634; --panel:#141a3a; --line:rgba(255,255,255,.08);
+    --indigo:#4F8CFF; --indigo-lt:#8FB4FF; --indigo-soft:rgba(79,140,255,.16);
+    --teal:#2EE6A6; --teal-lt:#7CEFC6; --teal-soft:rgba(46,230,166,.14);
+    --amber:#F5A524; --red:#F87171;
+    --txt:#E9ECF5; --muted:#8A92B2; --faint:#5A6288;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; background:radial-gradient(1200px 600px at 80% -10%,rgba(79,140,255,.10),transparent 60%),var(--navy);
+    font-family:'Pretendard',system-ui,sans-serif; color:var(--txt); min-height:100vh;
+    display:flex; justify-content:center; padding:32px 20px;
+  }
+  .mono{font-family:'Reddit Mono',monospace; font-variant-numeric:tabular-nums;}
+  .wrap{width:100%; max-width:1320px; background:var(--navy); border:1px solid var(--line); border-radius:16px; overflow:hidden; box-shadow:0 30px 80px rgba(0,0,0,.5);}
+
+  .gnb{display:flex; align-items:center; gap:4px; padding:10px 16px; border-bottom:1px solid var(--line); background:#0b0f28;}
+  .gnb .brand{display:flex; align-items:center; gap:10px; margin-right:16px;}
+  .gnb .brand img{height:22px; width:auto; display:block;}
+  .gnb a{font-size:13px; color:var(--muted); text-decoration:none; padding:8px 15px; border-radius:9px; font-weight:600;}
+  .gnb a:hover{color:var(--txt); background:rgba(255,255,255,.05);}
+  .gnb a.active{color:var(--teal); background:rgba(46,230,166,.1);}
+  .head{display:flex; align-items:center; justify-content:space-between; padding:18px 24px; border-bottom:1px solid var(--line); background:linear-gradient(180deg,#0d1230,transparent); flex-wrap:wrap; gap:12px;}
+  .logo{display:flex; align-items:center; gap:10px; font-weight:700; letter-spacing:.5px; font-size:15px;}
+  .dot{width:10px;height:10px;border-radius:3px;background:var(--teal);}
+  .logo .dot{box-shadow:0 0 12px var(--teal);}
+  .logo small{font-size:10px; color:var(--faint); letter-spacing:2px; margin-left:2px; font-weight:500;}
+  .controls{display:flex; gap:8px; flex-wrap:wrap;}
+  .chip{font-size:12px; color:var(--muted); border:1px solid var(--line); border-radius:9px; padding:7px 12px; background:var(--navy2); cursor:default;}
+  .chip b{color:var(--txt); font-weight:600;}
+
+  .kpis{display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--line);}
+  .kpi{background:var(--navy); padding:18px 24px;}
+  .kpi .lbl{font-size:11px; color:var(--muted); letter-spacing:.3px; margin-bottom:9px;}
+  .kpi .val{font-size:25px; font-weight:600; line-height:1;}
+  .kpi .val.teal{color:var(--teal);}
+  .kpi .sub{font-size:11px; margin-top:8px; color:var(--faint);}
+
+  /* charts row */
+  .charts{display:grid; grid-template-columns:340px 1fr; gap:16px; margin:2px 0 16px;}
+  .card{border:1px solid var(--line); border-radius:12px; background:var(--navy2); padding:16px 18px;}
+  .card-t{font-size:12px; color:var(--txt); font-weight:600; letter-spacing:.3px; margin-bottom:14px;}
+  .card-sub{font-size:10.5px; color:var(--faint); font-weight:400; margin-left:6px;}
+  .donut-card{display:flex; flex-direction:column;}
+  .donut-card .donut-wrap{flex:1;}
+  .donut-wrap{display:flex; align-items:center; gap:16px;}
+  #donut{flex:none; width:132px; height:132px;}
+  #donut svg{display:block; width:100%; height:100%;}
+  .d-legend{flex:1; display:flex; flex-direction:column; gap:9px; min-width:0;}
+  .d-legend .row{display:flex; align-items:center; gap:8px; font-size:11px;}
+  .d-legend .dot{width:9px;height:9px;border-radius:2px;flex:none;}
+  .d-legend .nm{color:var(--txt); flex:1; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; font-family:'Reddit Mono',monospace; font-size:10.5px;}
+  .d-legend .pct{font-family:'Reddit Mono',monospace; color:var(--muted);}
+  .ts-head{display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:10px; flex-wrap:wrap;}
+  .ts-head .card-t{margin-bottom:0;}
+  .ts-legend{display:flex; gap:15px; flex-wrap:wrap; font-size:10.5px; color:var(--muted);}
+  .ts-legend i{display:inline-block;width:11px;height:11px;border-radius:2px;margin-right:5px;vertical-align:-1px;}
+  .ts-legend .sw-rev{background:#5B77B0;}
+  .ts-legend .sw-spend{background:#89B0FE;}
+  .ts-legend .sw-line{background:#2EE6A6;}
+  .ts-cap{font-size:10px; color:var(--faint); margin:0 0 8px; line-height:1.4;}
+  #timeseries{width:100%;}
+  @media (max-width:900px){ .charts{grid-template-columns:1fr;} }
+
+  .kpis-5{grid-template-columns:repeat(5,1fr);}
+  .d-grp{display:flex; flex-direction:column; gap:7px;}
+  .d-grp + .d-grp{margin-top:11px;}
+  .d-grp-h{font-size:9.5px; color:var(--faint); letter-spacing:.6px; font-weight:600; text-transform:uppercase;}
+  .ts-box{position:relative;}
+  .ts-hit{cursor:pointer; pointer-events:all;}
+  .ts-hit:hover{fill:rgba(255,255,255,.05);}
+  .ts-tip{position:absolute; left:0; top:0; pointer-events:none; opacity:0; transition:opacity .12s; background:#0d1230; border:1px solid rgba(255,255,255,.14); border-radius:9px; padding:9px 11px; min-width:158px; box-shadow:0 14px 34px rgba(0,0,0,.55); z-index:5;}
+  .ts-tip .tt-d{font-family:'Reddit Mono',monospace; font-size:12px; color:var(--txt); font-weight:600; margin-bottom:7px;}
+  .ts-tip .tt-row{display:flex; justify-content:space-between; gap:18px; font-size:11px; color:var(--muted); margin-top:4px;}
+  .ts-tip .tt-row b{font-family:'Reddit Mono',monospace; color:var(--txt); font-weight:600;}
+  .ts-tip .tt-row b.teal{color:var(--teal);}
+  .ts-tip .tt-row b.amber{color:var(--amber);}
+
+  .body{padding:22px 24px 26px;}
+  .sec-head{display:flex; align-items:center; justify-content:space-between; margin:4px 0 16px; flex-wrap:wrap; gap:10px;}
+  .sec-t{font-size:12px; color:var(--muted); letter-spacing:1px; text-transform:uppercase;}
+
+  .tbl-scroll{overflow-x:auto; border:1px solid var(--line); border-radius:12px;}
+  table.mtbl{width:100%; min-width:900px; border-collapse:collapse; font-size:13px;}
+  .mtbl thead th{position:sticky; top:0; background:var(--navy2); text-align:right; padding:12px 14px 10px; border-bottom:1px solid var(--line); vertical-align:bottom;}
+  .mtbl th .mlbl{font-size:11px; color:var(--txt); font-weight:600; letter-spacing:.3px;}
+  .mtbl th .hint{display:block; font-size:9.5px; color:var(--faint); font-weight:400; margin-top:3px; letter-spacing:.2px;}
+  .mtbl th.l, .mtbl td.l{text-align:left;}
+  .mtbl th.roasc{background:rgba(46,230,166,.07);}
+
+  .mtbl td{padding:15px 14px; border-bottom:1px solid rgba(255,255,255,.05); text-align:right; color:var(--txt);}
+  .mtbl tbody tr{transition:background .15s;}
+  .mtbl tbody tr:hover td{background:rgba(79,140,255,.06); cursor:pointer;}
+  .mtbl tbody tr:last-child td{border-bottom:none;}
+  .mtbl tbody tr.lead td{background:linear-gradient(90deg,rgba(46,230,166,.06),transparent 55%);}
+  .mtbl tbody tr.lead:hover td{background:linear-gradient(90deg,rgba(46,230,166,.10),rgba(79,140,255,.05) 55%);}
+
+  .rk{font-family:'Reddit Mono',monospace; font-size:16px; color:var(--faint); text-align:center; width:44px;}
+  tr.lead .rk{color:var(--teal);}
+  .media{display:flex; align-items:center; gap:10px; font-weight:600; font-size:14px;}
+  .badge{width:22px;height:22px;border-radius:6px;display:grid;place-items:center;font-size:12px;font-weight:800; flex:none;}
+  .b-g{background:#EA4335;color:#fff;} .b-m{background:#0866FF;color:#fff;} .b-n{background:#03C75A;color:#fff;} .b-k{background:#FEE500;color:#3A1D1D;}
+  .chev{color:var(--faint); font-size:13px; margin-left:auto; display:inline-block; transition:transform .2s;}
+  #mbody tr.open .chev{transform:rotate(90deg); color:var(--txt);}
+  #mbody tr.open td{background:rgba(46,230,166,.09);}
+  #mbody tr.open td:first-child{box-shadow:inset 3px 0 0 var(--teal);}
+  #mbody tr.open .media, #mbody tr.open .roas .num{color:var(--teal);}
+  #mbody tr.camprow td:first-child{box-shadow:inset 3px 0 0 rgba(46,230,166,.28);}
+  .d-legend .row.dim{opacity:.32;}
+  .d-legend .row.on .nm{color:var(--teal); font-weight:700;}
+  .d-legend .row.on .pct{color:var(--teal);}
+  .ts-filter{margin-left:8px; font-size:10.5px; color:var(--faint); border:1px solid var(--line); border-radius:20px; padding:2px 9px; font-weight:400; vertical-align:1px;}
+  .ts-filter.on{color:#0A0E27; background:var(--teal); border-color:var(--teal); cursor:pointer; font-weight:600;}
+  .ts-filter.on .x{margin-left:3px; opacity:.8;}
+  .period-wrap{position:relative;}
+  .period-chip{font-family:inherit; cursor:pointer;}
+  .period-chip:hover{border-color:rgba(255,255,255,.2);}
+  .period-pop{position:absolute; top:calc(100% + 8px); right:0; left:auto; z-index:40; width:236px; max-width:calc(100vw - 40px); background:#0d1230; border:1px solid rgba(255,255,255,.12); border-radius:12px; box-shadow:0 18px 44px rgba(0,0,0,.55); padding:12px; opacity:0; transform:translateY(-6px); pointer-events:none; transition:opacity .16s, transform .16s;}
+  .period-pop.open{opacity:1; transform:none; pointer-events:auto;}
+  .pp-presets{display:grid; grid-template-columns:1fr 1fr; gap:6px;}
+  .pp-preset{font-family:inherit; font-size:12px; color:var(--muted); background:var(--navy2); border:1px solid var(--line); border-radius:8px; padding:8px 6px; cursor:pointer; transition:.12s;}
+  .pp-preset:hover{color:var(--txt); border-color:rgba(255,255,255,.2);}
+  .pp-preset.on{color:#0A0E27; background:var(--teal); border-color:var(--teal); font-weight:600;}
+  .pp-div{height:1px; background:var(--line); margin:11px 0;}
+  .pp-label{font-size:10px; color:var(--faint); letter-spacing:.3px; margin-bottom:8px;}
+  .pp-dates{display:flex; align-items:center; gap:6px;}
+  .pp-dates input[type=date]{flex:1; min-width:0; font-family:'Reddit Mono',monospace; font-size:11px; color:var(--txt); background:var(--navy2); border:1px solid var(--line); border-radius:7px; padding:6px 7px; color-scheme:dark;}
+  .pp-tilde{color:var(--faint); font-size:11px;}
+  .pp-apply{width:100%; margin-top:9px; font-family:inherit; font-size:12px; font-weight:600; color:#0A0E27; background:var(--teal); border:none; border-radius:8px; padding:8px; cursor:pointer;}
+  .pp-apply:hover{filter:brightness(1.08);}
+  #mbody tr.camprow td{background:rgba(255,255,255,.018); border-bottom:1px solid rgba(255,255,255,.04); padding-top:11px; padding-bottom:11px;}
+  #mbody tr.camprow:hover td{background:rgba(79,140,255,.05);}
+  .camp-name{display:flex; align-items:center; gap:8px; padding-left:0;}
+  .camp-name .txt{color:var(--txt); font-weight:500; font-size:12.5px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+  .camp-branch{color:var(--faint); font-family:'Reddit Mono',monospace; font-size:12px;}
+  .camp-tag{font-size:8.5px; color:var(--muted); border:1px solid var(--line); border-radius:4px; padding:1px 5px; letter-spacing:.3px; flex:none;}
+  td.roas.camp{background:rgba(79,140,255,.05);}
+  .roas.camp .cnum{font-family:'Reddit Mono',monospace; font-size:16px; font-weight:600; color:var(--indigo-lt);}
+  .roas.camp .rbar{height:4px; border-radius:4px; background:rgba(255,255,255,.07); margin-top:6px; overflow:hidden;}
+  .roas.camp .rbar i{display:block; height:100%; border-radius:4px; background:linear-gradient(90deg,#3F78E6,var(--indigo-lt)); width:0; transition:width .7s cubic-bezier(.2,.7,.2,1);}
+  /* 열린 매체의 캠페인 중 최고 ROAS 캠페인에만 키컬러(민트) */
+  #mbody tr.camp-lead td.roas.camp{background:rgba(46,230,166,.06);}
+  #mbody tr.camp-lead .roas.camp .cnum{color:var(--teal);}
+  #mbody tr.camp-lead .roas.camp .rbar i{background:linear-gradient(90deg,var(--teal),var(--teal-lt));}
+  #mbody tr.camp-lead td:first-child{box-shadow:inset 3px 0 0 var(--teal);}
+  #mbody tr.drill-foot td{background:rgba(79,140,255,.07); padding:13px 16px;}
+  .foot-wrap{display:flex; align-items:center; justify-content:space-between; gap:14px; flex-wrap:wrap;}
+  .foot-note{font-size:11px; color:var(--muted);}
+  .btn-detail{font-family:inherit; font-size:12px; font-weight:600; color:#0A0E27; background:var(--teal); border:none; border-radius:8px; padding:8px 14px; cursor:pointer; transition:filter .15s, transform .1s;}
+  .btn-detail:hover{filter:brightness(1.08);}
+  .btn-detail:active{transform:translateY(1px);}
+
+  td.roas{background:rgba(46,230,166,.05); min-width:132px;}
+  .roas .num{font-family:'Reddit Mono',monospace; font-size:22px; font-weight:600; color:var(--teal); line-height:1;}
+  .roas .rbar{height:5px; border-radius:4px; background:rgba(255,255,255,.07); margin-top:8px; overflow:hidden;}
+  .roas .rbar i{display:block; height:100%; width:0; border-radius:4px; background:linear-gradient(90deg,var(--teal),var(--teal-lt)); transition:width 1s cubic-bezier(.2,.7,.2,1);}
+  tr:not(.lead) .roas .num{color:var(--indigo-lt);}
+  tr:not(.lead) .roas .rbar i{background:linear-gradient(90deg,#3F78E6,var(--indigo-lt));}
+
+  /* 매체 열림(드릴다운) 중: 매체 행의 키컬러(민트) 모두 제거 → 민트는 최고 ROAS 캠페인에만 */
+  #mbody.drilling tr.lead td{background:transparent;}
+  #mbody.drilling tr.lead:hover td{background:rgba(79,140,255,.06);}
+  #mbody.drilling tr.lead .rk{color:var(--faint);}
+  #mbody.drilling tr.open td{background:rgba(79,140,255,.08);}
+  #mbody.drilling tr.open td:first-child{box-shadow:inset 3px 0 0 var(--indigo);}
+  #mbody.drilling tr.open .media{color:var(--txt);}
+  #mbody.drilling tr.open .roas .num,
+  #mbody.drilling tr.lead .roas .num{color:var(--indigo-lt);}
+  #mbody.drilling tr.open .roas .rbar i,
+  #mbody.drilling tr.lead .roas .rbar i{background:linear-gradient(90deg,#3F78E6,var(--indigo-lt));}
+
+  .mtbl td.num2{font-family:'Reddit Mono',monospace; color:var(--muted);}
+  .mtbl td.best{color:var(--amber); font-weight:600;}
+
+  .note{margin-top:22px; padding:14px 16px; border:1px dashed var(--line); border-radius:10px; font-size:12px; color:var(--muted); line-height:1.6;}
+  .note b{color:var(--teal);}
+  .legend-best{font-size:10.5px; color:var(--faint); margin-top:10px; display:flex; align-items:center; gap:6px;}
+  .legend-best .sw{display:inline-block;width:9px;height:9px;border-radius:2px;background:var(--amber);}
+
+  /* ===== drawer ===== */
+  .overlay{position:fixed; inset:0; background:rgba(5,8,20,.62); backdrop-filter:blur(3px); opacity:0; pointer-events:none; transition:opacity .25s; z-index:50; display:flex; justify-content:flex-end;}
+  .overlay.open{opacity:1; pointer-events:auto;}
+  .drawer{width:min(580px,94vw); height:100%; background:var(--navy); border-left:1px solid var(--line); box-shadow:-24px 0 70px rgba(0,0,0,.55); transform:translateX(24px); transition:transform .28s cubic-bezier(.2,.7,.2,1); overflow-y:auto;}
+  .overlay.open .drawer{transform:none;}
+
+  .dh{position:sticky; top:0; z-index:2; display:flex; align-items:center; gap:12px; padding:18px 22px; background:linear-gradient(180deg,#0d1230,var(--navy)); border-bottom:1px solid var(--line);}
+  .dh .badge{width:30px;height:30px;border-radius:8px;font-size:14px;}
+  .dh .dt{font-size:17px; font-weight:700;}
+  .dh .dperiod{font-size:11px; color:var(--faint); margin-top:2px;}
+  .dclose{margin-left:auto; width:30px;height:30px;border-radius:8px; border:1px solid var(--line); background:var(--navy2); color:var(--muted); cursor:pointer; font-size:15px; line-height:1;}
+  .dclose:hover{color:var(--txt); border-color:rgba(255,255,255,.2);}
+
+  .dbody{padding:20px 22px 28px;}
+  .dsec-t{font-size:11px; color:var(--muted); letter-spacing:1px; text-transform:uppercase; margin:22px 0 12px;}
+  .dsec-t:first-child{margin-top:0;}
+
+  .sumgrid{display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--line); border:1px solid var(--line); border-radius:10px; overflow:hidden;}
+  .sumc{background:var(--navy); padding:12px 13px;}
+  .sumc .l{font-size:10px; color:var(--faint); margin-bottom:6px;}
+  .sumc .v{font-family:'Reddit Mono',monospace; font-size:15px; font-weight:600;}
+  .sumc .v.teal{color:var(--teal);}
+
+  .chartbox{border:1px solid var(--line); border-radius:10px; padding:14px 12px 10px; background:var(--navy2);}
+  .chart-legend{display:flex; gap:16px; font-size:10.5px; color:var(--muted); margin:2px 4px 8px;}
+  .chart-legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:-1px;}
+
+  table.ptbl{width:100%; border-collapse:collapse; font-size:12px;}
+  .ptbl th{font-size:10px; color:var(--faint); font-weight:500; text-align:right; padding:0 8px 9px; border-bottom:1px solid var(--line);}
+  .ptbl th:first-child{text-align:left;}
+  .ptbl td{padding:11px 8px; border-bottom:1px solid rgba(255,255,255,.05); text-align:right;}
+  .ptbl td:first-child{text-align:left; font-weight:600;}
+  .ptbl .pmono{font-family:'Reddit Mono',monospace; color:var(--muted);}
+  .ptbl .proas{font-family:'Reddit Mono',monospace; color:var(--teal); font-weight:600;}
+  .sharecell{min-width:96px;}
+  .sharebar{height:6px; border-radius:4px; background:rgba(255,255,255,.07); overflow:hidden; margin-top:4px;}
+  .sharebar i{display:block;height:100%;border-radius:4px;background:linear-gradient(90deg,var(--indigo),var(--indigo-lt));}
+
+@media (max-width:640px){ .kpis,.kpis-5{grid-template-columns:repeat(2,1fr);} .sumgrid{grid-template-columns:repeat(2,1fr);} }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <nav class="gnb">
+      <span class="brand"><img src="thecap.png" alt="theCAP"><img src="logo.png" alt="ROAS Lab"></span>
+      <a href="roas-lab-overview.html" class="active">대시보드 홈</a>
+      <a href="analysis.html">광고 분석</a>
+    </nav>
+    <div class="head">
+      <div class="logo"><span class="dot"></span>ROAS&nbsp;LAB <small>CRM-BASED PERFORMANCE</small></div>
+      <div class="controls">
+        <div class="period-wrap">
+          <button class="chip period-chip" id="period-btn">기간 <b id="period-label">최근 30일</b> ▾</button>
+          <div class="period-pop" id="period-pop">
+            <div class="pp-presets">
+              <button class="pp-preset on" data-days="30">최근 30일</button>
+              <button class="pp-preset" data-days="14">최근 14일</button>
+              <button class="pp-preset" data-days="7">최근 7일</button>
+              <button class="pp-preset" data-days="1">어제</button>
+            </div>
+            <div class="pp-div"></div>
+            <div class="pp-custom">
+              <div class="pp-label">직접 선택</div>
+              <div class="pp-dates">
+                <input type="date" id="pp-start" min="2026-07-06" max="2026-08-04" value="2026-07-06">
+                <span class="pp-tilde">–</span>
+                <input type="date" id="pp-end" min="2026-07-06" max="2026-08-04" value="2026-08-04">
+              </div>
+              <button class="pp-apply" id="pp-apply">적용</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="kpis kpis-5">
+      <div class="kpi"><div class="lbl">실 ROAS</div><div class="val teal mono" id="kpi-roas">—</div><div class="sub">실 광고 매출 ÷ 광고비</div></div>
+      <div class="kpi"><div class="lbl">총 매출</div><div class="val mono" id="kpi-total">—</div><div class="sub">전 소스 · GA utm_source</div></div>
+      <div class="kpi"><div class="lbl">실 광고 매출</div><div class="val mono" id="kpi-paid">—</div><div class="sub">유료매체 귀속</div></div>
+      <div class="kpi"><div class="lbl">총 광고 비용</div><div class="val mono" id="kpi-spend">—</div><div class="sub">4개 매체 합산</div></div>
+      <div class="kpi"><div class="lbl">예측 LTV</div><div class="val mono" id="kpi-ltv">—</div><div class="sub">신규고객 1인 · 12개월</div></div>
+    </div>
+
+    <div class="body">
+      <div class="charts">
+        <div class="card donut-card">
+          <div class="card-t">매체별 매출<span class="card-sub">GA utm_source 기준</span></div>
+          <div class="donut-wrap">
+            <div id="donut"></div>
+            <div id="donut-legend" class="d-legend"></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="ts-head">
+            <div class="card-t">일별 매출 · 광고비 · ROAS<span class="card-sub" id="ts-range">최근 30일</span><span id="ts-filter" class="ts-filter" style="display:none"></span></div>
+            <div class="ts-legend">
+              <span><i class="sw-rev"></i>매출</span>
+              <span><i class="sw-spend"></i>광고비</span>
+              <span><i class="sw-line"></i>ROAS</span>
+            </div>
+          </div>
+          <div class="ts-box"><div id="timeseries"></div><div class="ts-tip" id="ts-tip"></div></div>
+        </div>
+      </div>
+      <div class="sec-head">
+        <div class="sec-t">매체별 성과 지표 · CRM ROAS 순</div>
+      </div>
+
+      <div class="tbl-scroll">
+        <table class="mtbl">
+          <thead>
+            <tr>
+              <th class="l" style="width:44px;">#</th>
+              <th class="l"><span class="mlbl">매체</span></th>
+              <th class="roasc"><span class="mlbl">CRM ROAS</span><span class="hint">높을수록 ↑ · 정렬 기준</span></th>
+              <th><span class="mlbl">광고비</span><span class="hint">기간 집행</span></th>
+              <th><span class="mlbl">CPM</span><span class="hint">1,000회 노출 · 낮을수록 ↓</span></th>
+              <th><span class="mlbl">CTR</span><span class="hint">높을수록 ↑</span></th>
+              <th><span class="mlbl">CPC</span><span class="hint">낮을수록 ↓</span></th>
+              <th><span class="mlbl">CVR</span><span class="hint">높을수록 ↑</span></th>
+              <th><span class="mlbl">CPA</span><span class="hint">신규 획득 · 낮을수록 ↓</span></th>
+              <th><span class="mlbl">LTV</span><span class="hint">예측 · 높을수록 ↑</span></th>
+            </tr>
+          </thead>
+          <tbody id="mbody"></tbody>
+        </table>
+      </div>
+
+      <div class="legend-best"><span class="sw"></span> 컬럼별 최고 성과 · 행 클릭 시 매체 상세(추이 · 광고별 분해)</div>
+    </div>
+  </div>
+
+<script>
+/* =========================================================================
+   ROAS LAB — 대시보드 데이터 레이어
+   -------------------------------------------------------------------------
+   · 데이터는 외부 파일 roas-data.json 에서 fetch 한다 (실제 API 응답 대체용).
+     JSON = utm_source/utm_campaign별 "일자 단위 성과 레코드"의 단일 원천.
+   · 화면은 데이터를 생성하지 않고, 선택 기간(preset/custom)에 해당하는
+     날짜만 합산해 KPI·도넛·콤보·표·드릴다운·광고분석 화면을 재집계한다.
+   · 집계 규칙: 매체 = 캠페인 합, 전체 = 매체 합,
+     ROAS = 매출 ÷ 광고비, 각 비율지표 = 집계 카운트의 비율.
+   · ※ file:// 로 직접 열면 브라우저가 로컬 fetch 를 차단하므로
+     반드시 로컬 서버(예: python -m http.server)로 서빙해야 한다.
+   ========================================================================= */
+let MEDIA={}, MEDIA_KEYS=[], CAMPAIGNS=[], ORGANIC=[], ISOS=[], NDAYS=0;
+const MMDD=iso=>iso.slice(5).split('-').join('.');
+
+/* ---- roas-data.json 로드 → 내부 구조로 변환 ---- */
+async function loadData(){
+  const res=await fetch('roas-data.json',{cache:'no-store'});
+  if(!res.ok) throw new Error('HTTP '+res.status+' — roas-data.json');
+  const j=await res.json();
+  ISOS=j.days.slice(); NDAYS=ISOS.length;
+  MEDIA={}; MEDIA_KEYS=[]; CAMPAIGNS=[];
+  j.media.forEach(m=>{
+    MEDIA[m.key]={name:m.name,badge:m.badge,cls:m.cls,source:m.source,color:m.color};
+    MEDIA_KEYS.push(m.key);
+    m.campaigns.forEach(c=>{
+      const col=k=>c.daily.map(d=>d[k]);
+      CAMPAIGNS.push({media:m.key,name:c.utm_campaign,ltv:c.ltv,daily:{
+        spend:col('spend'), rev:col('revenue'), impr:col('impressions'),
+        clicks:col('clicks'), conv:col('conversions'), newc:col('new_customers')}});
+    });
+  });
+  ORGANIC=j.organic.map(o=>({nm:o.utm_source,c:o.color,daily:o.daily.map(d=>d.revenue)}));
+  // 기간 셀렉터 날짜 범위를 데이터 보유 범위로 맞춤
+  const s=document.getElementById('pp-start'), e=document.getElementById('pp-end');
+  if(s&&e){s.min=e.min=ISOS[0]; s.max=e.max=ISOS[NDAYS-1]; s.value=ISOS[0]; e.value=ISOS[NDAYS-1];}
+}
+
+/* ---- 선택 기간 → 날짜 인덱스 ---- */
+let periodSel={mode:'preset',days:30};
+function selIdx(){
+  if(periodSel.mode==='preset'){const n=Math.min(periodSel.days,NDAYS);const a=[];for(let i=NDAYS-n;i<NDAYS;i++)a.push(i);return a;}
+  const a=[];ISOS.forEach((iso,i)=>{if(iso>=periodSel.start&&iso<=periodSel.end)a.push(i);});return a.length?a:[NDAYS-1];
+}
+function slice(arr,idxs){let s=0;for(const i of idxs)s+=arr[i];return s;}
+
+/* ---- 집계기 ---- */
+function campAgg(c,idxs){
+  const d=c.daily;
+  const spend=slice(d.spend,idxs),rev=slice(d.rev,idxs),impr=slice(d.impr,idxs),
+        clicks=slice(d.clicks,idxs),conv=slice(d.conv,idxs),newc=slice(d.newc,idxs);
+  return {name:c.name,ltv:c.ltv,spend,rev,impr,clicks,conv,newc,
+    roas:rev/spend,cpm:spend/impr*1000,ctr:clicks/impr,cpc:spend/clicks,cvr:conv/clicks,cpa:spend/newc};
+}
+function mediaAgg(mk,idxs){
+  const cs=CAMPAIGNS.filter(c=>c.media===mk);
+  let spend=0,rev=0,impr=0,clicks=0,conv=0,newc=0,ltvw=0;
+  cs.forEach(c=>{const a=campAgg(c,idxs);spend+=a.spend;rev+=a.rev;impr+=a.impr;clicks+=a.clicks;conv+=a.conv;newc+=a.newc;ltvw+=a.newc*c.ltv;});
+  const m=MEDIA[mk];
+  return {key:mk,name:m.name,badge:m.badge,cls:m.cls,source:m.source,color:m.color,
+    spend,rev,impr,clicks,conv,newc,
+    roas:rev/spend,cpm:spend/impr*1000,ctr:clicks/impr,cpc:spend/clicks,cvr:conv/clicks,cpa:spend/newc,ltv:ltvw/newc};
+}
+
+/* ---- 포맷터 ---- */
+const won=v=>'₩'+Math.round(v).toLocaleString('ko-KR');
+const pct=x=>(x*100).toFixed(1)+'%';
+const roasPct=x=>Math.round(x*100)+'%';
+
+/* =========================================================================
+   렌더러 — 모두 현재 선택 기간(selIdx)을 기준으로 재집계
+   ========================================================================= */
+let curSeries=[];   // 콤보차트 툴팁용 현재 시리즈
+
+/* ---- 1) KPI 카드 ---- */
+function renderKPI(idxs){
+  let paidRev=0,spend=0,newc=0,ltvw=0;
+  MEDIA_KEYS.forEach(mk=>{const a=mediaAgg(mk,idxs);paidRev+=a.rev;spend+=a.spend;newc+=a.newc;ltvw+=a.newc*a.ltv;});
+  let orgRev=0; ORGANIC.forEach(o=>orgRev+=slice(o.daily,idxs));
+  const totalRev=paidRev+orgRev;
+  document.getElementById('kpi-total').textContent=won(totalRev);
+  document.getElementById('kpi-paid').textContent =won(paidRev);
+  document.getElementById('kpi-spend').textContent=won(spend);
+  document.getElementById('kpi-roas').textContent =roasPct(paidRev/spend);
+  document.getElementById('kpi-ltv').textContent  =won(ltvw/newc);
+}
+
+/* ---- 2) 매체별 매출 도넛 ---- */
+function donutData(idxs){
+  const paid=MEDIA_KEYS.map(mk=>{const a=mediaAgg(mk,idxs);return {nm:a.source,v:a.rev,c:a.color,g:'paid'};})
+    .sort((x,y)=>y.v-x.v);
+  const org=ORGANIC.map(o=>({nm:o.nm,v:slice(o.daily,idxs),c:o.c,g:'organic'}));
+  return paid.concat(org);
+}
+function renderDonut(idxs,hl){
+  const D=donutData(idxs);
+  const total=D.reduce((a,b)=>a+b.v,0)||1;
+  const r=58,cx=75,cy=75,sw=20,C=2*Math.PI*r;
+  let off=0,segs='';
+  D.forEach(d=>{
+    const len=d.v/total*C;
+    const op = hl && d.nm!==hl ? 0.16 : 1;
+    segs+=`<circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="${d.c}" stroke-width="${sw}" opacity="${op}" stroke-dasharray="${Math.max(len-1.5,0)} ${C-Math.max(len-1.5,0)}" stroke-dashoffset="${-off}" transform="rotate(-90 ${cx} ${cy})"/>`;
+    off+=len;
+  });
+  let cTop='전체 매출', cBot=`${(total/1e8).toFixed(2)}억`;
+  if(hl){ const d=D.find(x=>x.nm===hl); if(d){ cTop=hl; cBot=`${(d.v/1e8).toFixed(2)}억`; } }
+  document.getElementById('donut').innerHTML=`<svg viewBox="0 0 150 150" width="150" height="150">${segs}
+    <text x="75" y="70" text-anchor="middle" fill="#8A92B2" font-size="9">${cTop}</text>
+    <text x="75" y="89" text-anchor="middle" fill="#E9ECF5" font-size="18" font-family="Reddit Mono" font-weight="600">${cBot}</text></svg>`;
+  const sum=arr=>arr.reduce((a,b)=>a+b.v,0);
+  const rows=arr=>arr.map(d=>`<div class="row${hl&&d.nm!==hl?' dim':''}${hl&&d.nm===hl?' on':''}"><span class="dot" style="background:${d.c}"></span><span class="nm">${d.nm}</span><span class="pct">${(d.v/total*100).toFixed(0)}%</span></div>`).join('');
+  const paid=D.filter(d=>d.g==='paid'), org=D.filter(d=>d.g==='organic');
+  document.getElementById('donut-legend').innerHTML=
+    `<div class="d-grp"><div class="d-grp-h">Paid · ${(sum(paid)/total*100).toFixed(0)}%</div>${rows(paid)}</div>`+
+    `<div class="d-grp"><div class="d-grp-h">Organic · ${(sum(org)/total*100).toFixed(0)}%</div>${rows(org)}</div>`;
+}
+function highlightDonut(key){ renderDonut(selIdx(), key?MEDIA[key].source:null); }
+function setFilterPill(key){
+  const el=document.getElementById('ts-filter'); if(!el) return;
+  if(key){ el.innerHTML=`${MEDIA[key].name} 필터 <span class="x">✕</span>`; el.classList.add('on'); el.style.display=''; }
+  else { el.textContent=''; el.classList.remove('on'); el.style.display='none'; }
+}
+
+/* ---- 3) 일별 콤보 (매출·광고비 막대 + ROAS 라인) ---- */
+let curFilter=null;   // 콤보차트 매체 필터 (null = 전체)
+function comboSeries(idxs,mediaKey){
+  const cs=mediaKey?CAMPAIGNS.filter(c=>c.media===mediaKey):CAMPAIGNS;
+  return idxs.map(i=>{
+    let rev=0,sp=0;
+    cs.forEach(c=>{rev+=c.daily.rev[i];sp+=c.daily.spend[i];});
+    if(!mediaKey) ORGANIC.forEach(o=>rev+=o.daily[i]);   // 전체일 때만 비유료 매출 포함(총매출 기준)
+    return {iso:ISOS[i],d:ISOS[i].slice(8),m:ISOS[i].slice(5,7),rev,sp};
+  });
+}
+function renderTS(idxs,mediaKey){
+  if(mediaKey!==undefined) curFilter=mediaKey;
+  let data=comboSeries(idxs,curFilter);
+  if(!data.length) data=comboSeries([NDAYS-1],curFilter);
+  curSeries=data;
+  const W=660,H=170,padL=12,padR=12,padT=14,padB=24;
+  const pw=W-padL-padR,ph=H-padT-padB,n=data.length;
+  const vmax=Math.max(...data.map(t=>t.rev))||1;
+  const roas=data.map(t=>t.rev/t.sp*100);
+  const rlo=Math.min(...roas)-70,rhi=Math.max(...roas)+70, rspan=(rhi-rlo)||1;
+  const cx=i=>n>1?padL+(i+0.5)*pw/n:W/2;
+  const bw=Math.min(30,pw/n*0.6), colW=pw/n;
+  const step=n>16?Math.ceil(n/12):1;
+  let bars='',grid='',line='',dots='',hits='';
+  for(let g=0;g<=3;g++){const y=padT+ph*g/3;grid+=`<line x1="${padL}" y1="${y}" x2="${W-padR}" y2="${y}" stroke="rgba(255,255,255,.05)"/>`;}
+  data.forEach((t,i)=>{
+    const x=cx(i),rh=t.rev/vmax*ph,sh=t.sp/vmax*ph;
+    bars+=`<rect x="${x-bw/2}" y="${padT+ph-rh}" width="${bw}" height="${rh}" rx="3" fill="#5B77B0"/>`;
+    bars+=`<rect x="${x-bw/2}" y="${padT+ph-sh}" width="${bw}" height="${sh}" rx="2.5" fill="#89B0FE"/>`;
+    const ry=padT+ph-(roas[i]-rlo)/rspan*ph;
+    line+=`${x},${ry} `;
+    dots+=`<circle cx="${x}" cy="${ry}" r="2.6" fill="#2EE6A6"/>`;
+    if(i%step===0||i===n-1) grid+=`<text x="${x}" y="${H-9}" text-anchor="middle" fill="#5A6288" font-size="9" font-family="Reddit Mono">${t.d}</text>`;
+    hits+=`<rect class="ts-hit" data-i="${i}" x="${x-colW/2}" y="${padT}" width="${colW}" height="${ph}" fill="transparent"/>`;
+  });
+  const linetag = n>1 ? `<polyline points="${line.trim()}" fill="none" stroke="#2EE6A6" stroke-width="2" stroke-linejoin="round"/>` : '';
+  document.getElementById('timeseries').innerHTML=`<svg viewBox="0 0 ${W} ${H}" width="100%" preserveAspectRatio="xMidYMid meet">${grid}${bars}${linetag}${dots}${hits}</svg>`;
+  bindTSHover();
+  const rg=document.getElementById('ts-range');
+  if(rg&&data.length){const a=data[0],b=data[data.length-1]; rg.textContent=data.length===1?`${a.m}.${a.d}`:`${a.m}.${a.d} – ${b.m}.${b.d}`;}
+}
+function bindTSHover(){
+  const box=document.querySelector('.ts-box'), tip=document.getElementById('ts-tip');
+  if(!box||!tip) return;
+  box.querySelectorAll('.ts-hit').forEach(r=>{
+    r.addEventListener('mousemove',e=>{
+      const t=curSeries[+r.dataset.i], net=t.rev-t.sp, roas=(t.rev/t.sp*100).toFixed(0);
+      tip.innerHTML=`<div class="tt-d">${t.m}/${t.d}</div>
+        <div class="tt-row"><span>매출</span><b>${won(t.rev)}</b></div>
+        <div class="tt-row"><span>광고비</span><b>${won(t.sp)}</b></div>
+        <div class="tt-row"><span>순규모</span><b>${won(net)}</b></div>
+        <div class="tt-row"><span>ROAS</span><b class="teal">${roas}%</b></div>`;
+      tip.style.opacity='1';
+      const bb=box.getBoundingClientRect(), tw=tip.offsetWidth, th=tip.offsetHeight;
+      let x=e.clientX-bb.left+14, y=e.clientY-bb.top+12;
+      if(x+tw>bb.width) x=e.clientX-bb.left-tw-14;
+      if(y+th>bb.height) y=bb.height-th-4;
+      if(y<0) y=4;
+      tip.style.left=x+'px'; tip.style.top=y+'px';
+    });
+    r.addEventListener('mouseleave',()=>{ tip.style.opacity='0'; });
+  });
+}
+
+/* ---- 4) 매체별 성과 지표 표 (CRM ROAS 내림차순) ---- */
+function bestSet(rows,defs){ // defs: [{key,dir}]  → Set of "col:rowIndex"
+  const set={};
+  defs.forEach(({key,dir})=>{let bi=0;rows.forEach((r,i)=>{if(dir==='min'?r[key]<rows[bi][key]:r[key]>rows[bi][key])bi=i;});set[key]=bi;});
+  return set;
+}
+function renderTable(idxs){
+  const rows=MEDIA_KEYS.map(mk=>mediaAgg(mk,idxs)).sort((a,b)=>b.roas-a.roas);
+  const maxRoas=Math.max(...rows.map(r=>r.roas))||1;
+  const best=bestSet(rows,[{key:'cpm',dir:'min'},{key:'ctr',dir:'max'},{key:'cpc',dir:'min'},{key:'cvr',dir:'max'},{key:'cpa',dir:'min'},{key:'ltv',dir:'max'}]);
+  const html=rows.map((r,i)=>{
+    const lead=i===0?' lead':'';
+    const w=(r.roas/maxRoas*100).toFixed(1);
+    const cell=(key,txt)=>`<td class="num2${best[key]===i?' best':''}">${txt}</td>`;
+    return `<tr class="${lead.trim()}" data-media="${r.key}">
+      <td class="rk">${String(i+1).padStart(2,'0')}</td>
+      <td class="l"><div class="media"><span class="badge ${r.cls}">${r.badge}</span>${r.name}<span class="chev">›</span></div></td>
+      <td class="roas"><div class="num">${roasPct(r.roas)}</div><div class="rbar"><i data-w="${w}"></i></div></td>
+      <td class="num2">${won(r.spend)}</td>
+      ${cell('cpm',won(r.cpm))}
+      ${cell('ctr',pct(r.ctr))}
+      ${cell('cpc',won(r.cpc))}
+      ${cell('cvr',pct(r.cvr))}
+      ${cell('cpa',won(r.cpa))}
+      ${cell('ltv',won(r.ltv))}
+    </tr>`;
+  }).join('');
+  const mb=document.getElementById('mbody');
+  mb.classList.remove('drilling');   // 표 재렌더 시 드릴다운 닫힘 → 매체 최고 ROAS 민트 복귀
+  mb.innerHTML=html;
+  mb.querySelectorAll('tr').forEach(tr=>tr.addEventListener('click',()=>toggleDrill(tr)));
+  const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  mb.querySelectorAll('.roas .rbar i').forEach((b,i)=>{const wv=b.dataset.w+'%';
+    if(reduce){b.style.transition='none';b.style.width=wv;} else {setTimeout(()=>b.style.width=wv,80+i*90);}});
+}
+
+/* ---- 5) 인라인 드릴다운 (utm_campaign) ---- */
+function buildCampRows(key,idxs){
+  const cs=CAMPAIGNS.filter(c=>c.media===key).map(c=>campAgg(c,idxs));
+  const maxRoas=Math.max(...cs.map(c=>c.roas))||1;
+  const leadIdx=cs.reduce((bi,c,i)=>c.roas>cs[bi].roas?i:bi,0);   // 최고 ROAS 캠페인 = 키컬러 대상
+  const best=bestSet(cs,[{key:'cpm',dir:'min'},{key:'ctr',dir:'max'},{key:'cpc',dir:'min'},{key:'cvr',dir:'max'},{key:'cpa',dir:'min'},{key:'ltv',dir:'max'}]);
+  const rows=cs.map((c,i)=>{
+    const cell=(k,txt)=>`<td class="num2${best[k]===i?' best':''}">${txt}</td>`;
+    return `<tr class="camprow${i===leadIdx?' camp-lead':''}" data-parent="${key}">
+    <td class="rk"></td>
+    <td class="l"><div class="camp-name"><span class="camp-tag">utm_campaign</span><span class="txt">${c.name}</span></div></td>
+    <td class="roas camp"><div class="cnum">${roasPct(c.roas)}</div><div class="rbar"><i data-w="${(c.roas/maxRoas*100).toFixed(1)}"></i></div></td>
+    <td class="num2">${won(c.spend)}</td>
+    ${cell('cpm',won(c.cpm))}
+    ${cell('ctr',pct(c.ctr))}
+    ${cell('cpc',won(c.cpc))}
+    ${cell('cvr',pct(c.cvr))}
+    ${cell('cpa',won(c.cpa))}
+    ${cell('ltv',won(c.ltv))}
+  </tr>`;}).join('');
+  const foot=`<tr class="camprow drill-foot" data-parent="${key}"><td colspan="10"><div class="foot-wrap">
+    <span class="foot-note">${MEDIA[key].name} · utm_campaign ${cs.length}개 · 클릭한 매체를 캠페인 단위로 분해했습니다</span>
+    <button class="btn-detail" onclick="event.stopPropagation(); openAdAnalysis('${key}')">광고 분석 화면에서 자세히 보기 →</button>
+  </div></td></tr>`;
+  return rows+foot;
+}
+function toggleDrill(row){
+  const key=row.dataset.media, wasOpen=row.classList.contains('open'), mb=document.getElementById('mbody');
+  document.querySelectorAll('#mbody tr.open').forEach(o=>{o.classList.remove('open'); document.querySelectorAll(`#mbody tr[data-parent="${o.dataset.media}"]`).forEach(r=>r.remove());});
+  if(wasOpen){ mb.classList.remove('drilling'); renderTS(selIdx(),null); highlightDonut(null); setFilterPill(null); return; }
+  mb.classList.add('drilling');
+  row.classList.add('open');
+  row.insertAdjacentHTML('afterend', buildCampRows(key,selIdx()));
+  requestAnimationFrame(()=>document.querySelectorAll(`#mbody tr[data-parent="${key}"] .roas.camp .rbar i`).forEach(b=>{b.style.width=b.dataset.w+'%';}));
+  renderTS(selIdx(),key);   // 콤보차트를 해당 매체 기준으로 필터 (핸드오프 §4.6 옵션 b)
+  highlightDonut(key); setFilterPill(key);
+}
+
+/* ---- 6) 광고 상세 분석 화면 (별도 페이지 analysis.html) 으로 이동 ----
+   메인에서 매체 클릭 → "자세히 보기"로 진입하면 해당 매체·기간이 선택된 상태로 열림 */
+function openAdAnalysis(key){
+  const idxs=selIdx();
+  const start=ISOS[idxs[0]], end=ISOS[idxs[idxs.length-1]];
+  const url=`analysis.html?media=${encodeURIComponent(key)}&start=${start}&end=${end}`;
+  const w=window.open(url,'_blank');
+  if(!w) location.href=url;   // 팝업 차단 시 같은 탭 이동
+}
+
+/* ---- 전체 재렌더 ---- */
+function renderAll(){
+  const idxs=selIdx();
+  renderKPI(idxs);
+  renderDonut(idxs,null);
+  renderTS(idxs,null);   // 기간 변경 시 콤보 필터 해제(표를 다시 그리며 드릴다운도 닫힘)
+  setFilterPill(null);
+  renderTable(idxs);
+}
+
+/* ---- 기간 셀렉터 ---- */
+function fmtMMDD(iso){const p=iso.split('-');return p[1]+'.'+p[2];}
+function setPreset(days,label){
+  periodSel={mode:'preset',days:+days};
+  document.getElementById('period-label').textContent=label;
+  document.querySelectorAll('.pp-preset').forEach(b=>b.classList.toggle('on',+b.dataset.days===+days));
+  renderAll();
+}
+function applyCustom(){
+  let a=document.getElementById('pp-start').value, b=document.getElementById('pp-end').value;
+  if(!a||!b) return;
+  if(a>b){const t=a;a=b;b=t;}
+  periodSel={mode:'custom',start:a,end:b};
+  document.getElementById('period-label').textContent=`${fmtMMDD(a)} – ${fmtMMDD(b)}`;
+  document.querySelectorAll('.pp-preset').forEach(x=>x.classList.remove('on'));
+  renderAll();
+  document.getElementById('period-pop').classList.remove('open');
+}
+
+function showLoadError(msg){
+  const wrap=document.querySelector('.wrap');
+  if(wrap) wrap.insertAdjacentHTML('afterbegin',
+    `<div style="margin:16px;padding:16px 18px;border:1px solid rgba(248,113,113,.4);background:rgba(248,113,113,.08);border-radius:12px;color:#F87171;font-size:13px;line-height:1.7;">
+      <b>데이터를 불러오지 못했습니다.</b> (${msg})<br>
+      <span style="color:#8A92B2;">이 대시보드는 <code style="color:#E9ECF5;">roas-data.json</code>을 fetch로 읽습니다. 브라우저는 <code>file://</code>로 직접 열면 로컬 파일 fetch를 차단하므로, 폴더에서 로컬 서버를 띄워 접속해 주세요:</span><br>
+      <code style="display:inline-block;margin-top:8px;color:#2EE6A6;">python -m http.server 8000</code>
+      <span style="color:#8A92B2;"> → </span><code style="color:#2EE6A6;">http://localhost:8000/roas-lab-overview.html</code>
+    </div>`);
+}
+window.addEventListener('load',async()=>{
+  try{ await loadData(); }
+  catch(e){ console.error(e); showLoadError(e.message); return; }
+  renderAll();
+  const pb=document.getElementById('period-btn'), pp=document.getElementById('period-pop');
+  if(pb&&pp){
+    pb.addEventListener('click',e=>{e.stopPropagation(); pp.classList.toggle('open');});
+    pp.addEventListener('click',e=>e.stopPropagation());
+    document.addEventListener('click',()=>pp.classList.remove('open'));
+    document.querySelectorAll('.pp-preset').forEach(b=>b.addEventListener('click',()=>{ setPreset(b.dataset.days,b.textContent); pp.classList.remove('open'); }));
+    const ap=document.getElementById('pp-apply'); if(ap) ap.addEventListener('click',applyCustom);
+  }
+  const fp=document.getElementById('ts-filter');
+  if(fp) fp.addEventListener('click',()=>{const o=document.querySelector('#mbody tr.open'); if(o) toggleDrill(o);});
+});
+</script>
+</body>
+</html>
