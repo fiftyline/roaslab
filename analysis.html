@@ -90,13 +90,11 @@
   .cnt{font-size:11px; color:var(--indigo-lt); border:1px solid rgba(79,140,255,.3); background:rgba(79,140,255,.08); border-radius:20px; padding:3px 10px; font-family:'Reddit Mono','Pretendard',sans-serif;}
   .dl{margin-left:auto; font-family:inherit; font-size:12px; font-weight:600; color:#0A0E27; background:var(--teal); border:none; border-radius:9px; padding:9px 14px; cursor:pointer; display:flex; align-items:center; gap:6px;}
   .dl:hover{filter:brightness(1.08);}
-  .pv-body{display:grid; grid-template-columns:190px minmax(0,1fr); gap:16px;}
+  .pv-body{display:grid; grid-template-columns:auto minmax(0,1fr); gap:16px; align-items:start;}
   @media(max-width:820px){ .pv-body{grid-template-columns:minmax(0,1fr);} }
   .pv-side{border:1px solid var(--line); border-radius:12px; background:var(--navy2); padding:14px 15px; align-self:start;}
   .pv-side h4{margin:0 0 12px; font-size:11px; color:var(--muted); letter-spacing:.5px; text-transform:uppercase; font-weight:600;}
-  .dim{display:flex; align-items:center; gap:9px; font-size:12.5px; color:var(--txt); padding:8px 4px; cursor:pointer; border-radius:7px;}
-  .dim:hover{background:rgba(255,255,255,.03);}
-  .dim input{accent-color:var(--teal); width:15px; height:15px;}
+  #dim-list{display:flex; flex-direction:column; align-items:flex-start; gap:6px;}
   .cols-wrap{border:1px solid var(--line); border-radius:12px; background:var(--navy2); padding:12px 14px; margin-bottom:12px;}
   .cols-wrap .lbl{font-size:10px; color:var(--faint); letter-spacing:.4px; margin-bottom:9px;}
   .cols{display:flex; gap:6px; flex-wrap:wrap;}
@@ -206,7 +204,7 @@ const DIMS=[
 const METRICS=[
   {key:'revenue',label:'매출액',type:'won'},
   {key:'spend',label:'광고비',type:'won'},
-  {key:'custom_spend',label:'광고비(Custom)',type:'won'},
+  {key:'custom_spend',label:'광고비(C)',type:'won'},
   {key:'roas',label:'ROAS',type:'pct100'},
   {key:'cpm',label:'CPM',type:'won'},
   {key:'ctr',label:'CTR',type:'pct'},
@@ -221,10 +219,12 @@ const METRICS=[
   {key:'new_customers',label:'신규고객수',type:'int'}
 ];
 const METRIC_BY=Object.fromEntries(METRICS.map(m=>[m.key,m]));
-const DEFAULT_COLS=['revenue','spend','roas','cpm','ctr','cpc','cvr','cpa','orders'];
+const DIM_BY=Object.fromEntries(DIMS.map(d=>[d.key,d]));
+const DEFAULT_COLS=['revenue','spend','roas','cpm','ctr','cpc','cvr','cpa','new_customers'];
 
 let FACTS=[], MEDIA_META={}, DAYS=[], MINISO, MAXISO;
-const state={ start:null, end:null, media:new Set(), dims:['media','campaign'],
+const state={ start:null, end:null, media:new Set(),
+  dimOrder:DIMS.map(d=>d.key), dims:['media','campaign'],
   colOrder:METRICS.map(m=>m.key), cols:new Set(DEFAULT_COLS),
   sort:{key:'roas',dir:'desc'}, gran:'day' };
 let curCombo=[];
@@ -251,7 +251,7 @@ function dimVal(k,r){
   if(k==='product') return r.product_name;
   if(k==='productId') return r.product_id;
 }
-const activeDims=()=>DIMS.filter(d=>state.dims.includes(d.key));
+const activeDims=()=>state.dimOrder.filter(k=>state.dims.includes(k)).map(k=>DIM_BY[k]);
 const activeCols=()=>state.colOrder.filter(k=>state.cols.has(k)).map(k=>METRIC_BY[k]);
 
 function pivot(){
@@ -420,16 +420,38 @@ function downloadCSV(){
 }
 
 /* ---------- 컨트롤 렌더 ---------- */
+let dimDragKey=null, dimJustDragged=false;
 function renderDimList(){
-  $('#dim-list').innerHTML=DIMS.map(d=>`<label class="dim"><input type="checkbox" data-dim="${d.key}" ${state.dims.includes(d.key)?'checked':''}>${d.label}</label>`).join('');
-  $$('#dim-list input').forEach(cb=>cb.addEventListener('change',()=>{
-    const k=cb.dataset.dim;
-    if(cb.checked){ if(!state.dims.includes(k)) state.dims.push(k); }
-    else state.dims=state.dims.filter(x=>x!==k);
-    // 정렬 기준이 사라진 dim이면 첫 컬럼으로 리셋
-    if(state.sort.key.startsWith('dim:') && +state.sort.key.slice(4)>=activeDims().length) state.sort={key:'roas',dir:'desc'};
-    renderPivot();
-  }));
+  $('#dim-list').innerHTML=state.dimOrder.map(k=>{const d=DIM_BY[k];
+    return `<button class="colchip${state.dims.includes(k)?' on':''}" draggable="true" data-dim="${k}"><span class="grip">⠿</span>${d.label}</button>`;}).join('');
+  $$('#dim-list .colchip').forEach(b=>{
+    // 토글 (드래그 직후 클릭은 무시)
+    b.addEventListener('click',()=>{
+      if(dimJustDragged){ dimJustDragged=false; return; }
+      const k=b.dataset.dim;
+      if(state.dims.includes(k)) state.dims=state.dims.filter(x=>x!==k);
+      else state.dims.push(k);
+      if(state.sort.key.startsWith('dim:') && +state.sort.key.slice(4)>=activeDims().length) state.sort={key:'roas',dir:'desc'};
+      renderDimList(); renderPivot();
+    });
+    // 드래그로 순서 변경
+    b.addEventListener('dragstart',e=>{ dimDragKey=b.dataset.dim; e.dataTransfer.effectAllowed='move'; b.classList.add('drag'); });
+    b.addEventListener('dragend',()=>b.classList.remove('drag'));
+    b.addEventListener('dragover',e=>{ e.preventDefault(); e.dataTransfer.dropEffect='move'; b.classList.add('over'); });
+    b.addEventListener('dragleave',()=>b.classList.remove('over'));
+    b.addEventListener('drop',e=>{
+      e.preventDefault(); b.classList.remove('over');
+      const tgt=b.dataset.dim;
+      if(dimDragKey && dimDragKey!==tgt){
+        const arr=state.dimOrder.filter(x=>x!==dimDragKey);
+        arr.splice(arr.indexOf(tgt),0,dimDragKey);
+        state.dimOrder=arr; dimJustDragged=true;
+        if(state.sort.key.startsWith('dim:')) state.sort={key:'roas',dir:'desc'};
+        renderDimList(); renderPivot();
+      }
+      dimDragKey=null;
+    });
+  });
 }
 let dragKey=null, justDragged=false;
 function renderColList(){
