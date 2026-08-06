@@ -199,7 +199,7 @@ const pct100=v=>Math.round(v*100)+'%';
 const DIMS=[
   {key:'month',label:'날짜(월)'},{key:'day',label:'날짜(일)'},
   {key:'media',label:'매체'},{key:'source',label:'소스'},
-  {key:'campaign',label:'캠페인'},{key:'product',label:'상품명'},{key:'productId',label:'상품ID'}
+  {key:'campaign',label:'캠페인'},{key:'creative',label:'광고 소재'},{key:'product',label:'상품명'},{key:'productId',label:'상품ID'}
 ];
 const METRICS=[
   {key:'revenue',label:'매출액',type:'won'},
@@ -220,7 +220,7 @@ const METRICS=[
 ];
 const METRIC_BY=Object.fromEntries(METRICS.map(m=>[m.key,m]));
 const DIM_BY=Object.fromEntries(DIMS.map(d=>[d.key,d]));
-const DEFAULT_COLS=['revenue','spend','roas','cpm','ctr','cpc','cvr','cpa','new_customers'];
+const DEFAULT_COLS=['revenue','spend','roas','cpm','ctr','cpc','cvr','cpa'];
 
 let FACTS=[], MEDIA_META={}, DAYS=[], MINISO, MAXISO;
 const state={ start:null, end:null, media:new Set(),
@@ -248,6 +248,7 @@ function dimVal(k,r){
   if(k==='media') return MEDIA_META[r.media].name;
   if(k==='source') return r.source;
   if(k==='campaign') return r.utm_campaign;
+  if(k==='creative') return r.creative;
   if(k==='product') return r.product_name;
   if(k==='productId') return r.product_id;
 }
