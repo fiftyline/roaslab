@@ -105,14 +105,19 @@
   .colchip.on{color:var(--txt); border-color:rgba(79,140,255,.5); background:rgba(79,140,255,.12);}
   .colchip.drag{opacity:.4;}
   .colchip.over{border-color:var(--teal); box-shadow:0 0 0 1px var(--teal) inset;}
-  .tbl-scroll{overflow:auto; max-height:560px; border:1px solid var(--line); border-radius:12px;}
+  .tbl-scroll{overflow:auto; max-height:560px; border:1px solid var(--line); border-radius:12px; scrollbar-width:thin; scrollbar-color:rgba(255,255,255,.18) transparent;}
+  .tbl-scroll::-webkit-scrollbar{width:10px; height:10px;}
+  .tbl-scroll::-webkit-scrollbar-track{background:transparent;}
+  .tbl-scroll::-webkit-scrollbar-thumb{background:rgba(255,255,255,.16); border-radius:8px; border:2px solid transparent; background-clip:padding-box;}
+  .tbl-scroll::-webkit-scrollbar-thumb:hover{background:rgba(46,230,166,.45); background-clip:padding-box;}
+  .tbl-scroll::-webkit-scrollbar-corner{background:transparent;}
   table.pv{width:100%; border-collapse:collapse; font-size:12.5px; white-space:nowrap;}
   .pv thead th{position:sticky; top:0; z-index:2; background:var(--navy2); text-align:right; padding:11px 13px; border-bottom:1px solid var(--line); font-size:11px; color:var(--muted); font-weight:600; cursor:pointer; user-select:none;}
   .pv thead th.l{text-align:left;} .pv thead th:hover{color:var(--txt);}
   .pv thead th .ar{color:var(--teal); margin-left:3px;}
   .pv td{padding:12px 13px; border-bottom:1px solid rgba(255,255,255,.05); text-align:right; color:var(--muted); font-family:'Reddit Mono',monospace;}
   .pv td.l{text-align:left; color:var(--txt); font-family:'Pretendard',sans-serif; font-weight:500;}
-  .pv td.rev{color:var(--txt); font-weight:600;}
+  .pv th.divide, .pv td.divide{border-left:1px solid rgba(255,255,255,.15);}
   .pv td.roas{color:var(--teal); font-weight:600;}
   .pv tbody tr:hover td{background:rgba(79,140,255,.05);}
   .pv tbody tr:last-child td{border-bottom:none;}
@@ -366,16 +371,17 @@ function renderPivot(){
   const arrow=key=>s.key===key?`<span class="ar">${s.dir==='desc'?'▼':'▲'}</span>`:'';
   let thead='<tr>';
   dims.forEach((d,i)=>thead+=`<th class="l" data-sort="dim:${i}">${d.label}${arrow('dim:'+i)}</th>`);
-  cols.forEach(c=>thead+=`<th class="${c.type==='text'?'l':''}" data-sort="${c.key}">${c.label}${arrow(c.key)}</th>`);
+  cols.forEach((c,ci)=>thead+=`<th class="${ci===0&&dims.length>0?'divide':''}" data-sort="${c.key}">${c.label}${arrow(c.key)}</th>`);
   thead+='</tr>';
   $('#pv-thead').innerHTML=thead;
   if(!arr.length){ $('#pv-tbody').innerHTML=`<tr><td class="l" colspan="${dims.length+cols.length}"><div class="empty">데이터 없음</div></td></tr>`; bindSort(); return; }
   $('#pv-tbody').innerHTML=arr.map(row=>{
     let tds=dims.map((d,i)=>`<td class="l">${row.dv[i]}</td>`).join('');
-    tds+=cols.map(c=>{
-      if(c.type==='text') return `<td class="l">${row.source}</td>`;
-      const cls=c.key==='revenue'?' rev':c.key==='roas'?' roas':'';
-      return `<td class="${cls.trim()}">${fmt(c.type,row[c.key])}</td>`;
+    tds+=cols.map((c,ci)=>{
+      const cls=[];
+      if(ci===0&&dims.length>0) cls.push('divide');
+      if(c.key==='roas') cls.push('roas');
+      return `<td class="${cls.join(' ')}">${fmt(c.type,row[c.key])}</td>`;
     }).join('');
     return `<tr>${tds}</tr>`;
   }).join('');
